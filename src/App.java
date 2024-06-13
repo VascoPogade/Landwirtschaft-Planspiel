@@ -1,5 +1,6 @@
 public class App {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, Paul!");
+    public static void main(String[] args) {
+        GameController game = new GameController();
+        //game.start();
     }
 }
