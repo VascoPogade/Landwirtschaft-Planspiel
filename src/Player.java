@@ -13,7 +13,7 @@ public class Player {
         this.mitarbeiterzufriedenheit = 50;
         this.nachhaltigkeit = 50;
         this.ansehen = 50;
-        this.risiko = 0.5f;
+        this.risiko = (float) 0.5;
     }
 
     //Implement methods to increase and decrease the player's attributes

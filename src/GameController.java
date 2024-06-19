@@ -3,9 +3,11 @@ public class GameController {
     private MainFrame mainFrame;
     int scenarioNumber;
 
-    String[] questions;
-    String[] options1;
-    String[] options2;
+String[] questions;
+String[] options1;
+String[] options2;
+int[][] attributes1Change;
+int[][] attributes2Change;
 
     String questionText1 = "You have the option to invest in new technology for your farm. This will increase your harvest by 10%, but it will also increase your risk by 5%. Do you want to proceed?";
     String questionText2 = "You have the option to implement sustainable farming practices. This will increase your sustainability by 10%, but it will also decrease your harvest by 5%. Do you want to proceed?";
@@ -60,6 +62,44 @@ public class GameController {
     String question17Option1Text = "Reduce investment in marketing";
     String question17Option2Text = "Do not reduce investment in marketing";
 
+    int[] questions1Attributes1Change = {1, 0, 0, 0, 0, 0, 5};
+    int[] questions1Attributes2Change = {2, 0, 0, 0, 0, 0, 0};
+    int[] questions2Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions2Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions3Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions3Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions4Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions4Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions5Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions5Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions6Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions6Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions7Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions7Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions8Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions8Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions9Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions9Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions10Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions10Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions11Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions11Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions12Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions12Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions13Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions13Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions14Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions14Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions15Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions15Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions16Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions16Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions17Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
+    int[] questions17Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
+
+
+
+
 
     public GameController() {
         player = new Player();
@@ -72,7 +112,8 @@ public class GameController {
         questions = new String[]{questionText1, questionText2, questionText3, questionText4, questionText5, questionText6, questionText7, questionText8, questionText9, questionText10, questionText11, questionText12, questionText13, questionText14, questionText15, questionText16, questionText17};
         options1 = new String[]{question1Option1Text, question2Option1Text, question3Option1Text, question4Option1Text, question5Option1Text, question6Option1Text, question7Option1Text, question8Option1Text, question9Option1Text, question10Option1Text, question11Option1Text, question12Option1Text, question13Option1Text, question14Option1Text, question15Option1Text, question16Option1Text, question17Option1Text};
         options2 = new String[]{question1Option2Text, question2Option2Text, question3Option2Text, question4Option2Text, question5Option2Text, question6Option2Text, question7Option2Text, question8Option2Text, question9Option2Text, question10Option2Text, question11Option2Text, question12Option2Text, question13Option2Text, question14Option2Text, question15Option2Text, question16Option2Text, question17Option2Text};
-
+        attributes1Change = new int[][]{questions1Attributes1Change, questions2Attributes1Change, questions3Attributes1Change, questions4Attributes1Change, questions5Attributes1Change, questions6Attributes1Change, questions7Attributes1Change, questions8Attributes1Change, questions9Attributes1Change, questions10Attributes1Change, questions11Attributes1Change, questions12Attributes1Change, questions13Attributes1Change, questions14Attributes1Change, questions15Attributes1Change, questions16Attributes1Change, questions17Attributes1Change};
+        attributes2Change = new int[][]{questions1Attributes2Change, questions2Attributes2Change, questions3Attributes2Change, questions4Attributes2Change, questions5Attributes2Change, questions6Attributes2Change, questions7Attributes2Change, questions8Attributes2Change, questions9Attributes2Change, questions10Attributes2Change, questions11Attributes2Change, questions12Attributes2Change, questions13Attributes2Change, questions14Attributes2Change, questions15Attributes2Change, questions16Attributes2Change, questions17Attributes2Change};
         mainFrame.optionPanel1.addOptionButtonListener(e -> handleOption1());
         mainFrame.optionPanel2.addOptionButtonListener(e -> handleOption2());
 
@@ -82,6 +123,7 @@ public class GameController {
     private void handleOption1() {
         // Implement logic for option 1
         // mainFrame.optionPanel1.setOptionText("New explanatory text for Option 1");
+        changeAttributes();
         nextScenario();
         updateGUI();
     }
@@ -112,5 +154,15 @@ public class GameController {
     private void endGame() {
         // Implement logic to end the game
         mainFrame.scenarioPanel.setScenarioText("Game Ended");
+    }
+
+    private void changeAttributes()
+    {
+        player.changeErnte(attributes1Change[scenarioNumber][0]);
+        player.changeVermoegen(attributes1Change[scenarioNumber][1]);
+        player.changeMitarbeiterzufriedenheit(attributes1Change[scenarioNumber][2]);
+        player.changeNachhaltigkeit(attributes1Change[scenarioNumber][3]);
+        player.changeAnsehen(attributes1Change[scenarioNumber][4]);
+        player.changeRisiko(attributes1Change[scenarioNumber][5]);
     }
 }
