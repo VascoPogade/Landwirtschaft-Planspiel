@@ -18,52 +18,54 @@ public class Player {
 
     //Implement methods to increase and decrease the player's attributes
 
-    public void increaseErnte(int ernteIncrease) {
-        this.ernte += ernteIncrease;
+    public int getErnte() {
+        return ernte;
     }
 
-    public void decreaseErnte(int ernteDecrease) {
-        this.ernte -= ernteDecrease;
+    public int getVermoegen() {
+        return vermoegen;
     }
 
-    public void increaseVermoegen(int vermoegenIncrease) {
-        this.vermoegen += vermoegenIncrease;
+    public int getMitarbeiterzufriedenheit() {
+        return mitarbeiterzufriedenheit;
     }
 
-    public void decreaseVermoegen(int vermoegenDecrease) {
-        this.vermoegen -= vermoegenDecrease;
+    public int getNachhaltigkeit() {
+        return nachhaltigkeit;
     }
 
-    public void increaseMitarbeiterzufriedenheit(int mitarbeiterzufriedenheitIncrease) {
-        this.mitarbeiterzufriedenheit += mitarbeiterzufriedenheitIncrease;
+    public int getAnsehen() {
+        return ansehen;
     }
 
-    public void decreaseMitarbeiterzufriedenheit(int mitarbeiterzufriedenheitDecrease) {
-        this.mitarbeiterzufriedenheit -= mitarbeiterzufriedenheitDecrease;
+    public float getRisiko() {
+        return risiko;
     }
 
-    public void increaseNachhaltigkeit(int nachhaltigkeitIncrease) {
-        this.nachhaltigkeit += nachhaltigkeitIncrease;
+    //Implement methods to change the player's attributes
+
+    public void changeErnte(int value) {
+        ernte += value;
     }
 
-    public void decreaseNachhaltigkeit(int nachhaltigkeitDecrease) {
-        this.nachhaltigkeit -= nachhaltigkeitDecrease;
+    public void changeVermoegen(int value) {
+        vermoegen += value;
     }
 
-    public void increaseAnsehen(int ansehenIncrease) {
-        this.ansehen += ansehenIncrease;
+    public void changeMitarbeiterzufriedenheit(int value) {
+        mitarbeiterzufriedenheit += value;
     }
 
-    public void decreaseAnsehen(int ansehenDecrease) {
-        this.ansehen -= ansehenDecrease;
+    public void changeNachhaltigkeit(int value) {
+        nachhaltigkeit += value;
     }
 
-    public void increaseRisiko(float risikoIncrease) {
-        this.risiko += risikoIncrease;
+    public void changeAnsehen(int value) {
+        ansehen += value;
     }
 
-    public void decreaseRisiko(float risikoDecrease) {
-        this.risiko -= risikoDecrease;
+    public void changeRisiko(float value) {
+        risiko += value;
     }
 
     //Implement a method to check if the player has lost the game

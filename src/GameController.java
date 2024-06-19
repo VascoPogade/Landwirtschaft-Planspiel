@@ -93,7 +93,13 @@ public class GameController {
     }
 
     private void updateGUI() {
-        // Update the attributes panel with the player's current attributes extracted from the player object
+        // Update the GUI with the player's attributes
+        mainFrame.attributesPanel.setAttributeValue(0, player.getErnte());
+        mainFrame.attributesPanel.setAttributeValue(1, player.getVermoegen());
+        mainFrame.attributesPanel.setAttributeValue(2, player.getMitarbeiterzufriedenheit());
+        mainFrame.attributesPanel.setAttributeValue(3, player.getNachhaltigkeit());
+        mainFrame.attributesPanel.setAttributeValue(4, player.getAnsehen());
+        // mainFrame.attributesPanel.setAttributeValue(5, (int) (player.getRisiko() * 100));
     }
 
     private void nextScenario() {
