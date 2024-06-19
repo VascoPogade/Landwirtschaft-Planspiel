@@ -167,7 +167,7 @@ int[][] attributes2Change;
 
     private void endGame() {
         // Implement logic to end the game
-        mainFrame.scenarioPanel.setScenarioText("Game Ended");
+        mainFrame.showEndScreen();
     }
 
     private void changeAttributesOne()
