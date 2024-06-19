@@ -4,7 +4,7 @@ public class Player {
     private int mitarbeiterzufriedenheit;
     private int nachhaltigkeit;
     private int ansehen;
-    private float risiko;
+    private int risiko;
 
 
     public Player() {
@@ -13,7 +13,7 @@ public class Player {
         this.mitarbeiterzufriedenheit = 50;
         this.nachhaltigkeit = 50;
         this.ansehen = 50;
-        this.risiko = (float) 0.5;
+        this.risiko = 5;
     }
 
     //Implement methods to increase and decrease the player's attributes
@@ -38,7 +38,7 @@ public class Player {
         return ansehen;
     }
 
-    public float getRisiko() {
+    public int getRisiko() {
         return risiko;
     }
 
@@ -64,13 +64,13 @@ public class Player {
         ansehen += value;
     }
 
-    public void changeRisiko(float value) {
+    public void changeRisiko(int value) {
         risiko += value;
     }
 
     //Implement a method to check if the player has lost the game
 
     public boolean hasLost() {
-        return ernte <= 0 || vermoegen <= 0 || mitarbeiterzufriedenheit <= 0 || nachhaltigkeit <= 0 || ansehen <= 0 || risiko >= 1;
+        return ernte <= 0 || vermoegen <= 0 || mitarbeiterzufriedenheit <= 0 || nachhaltigkeit <= 0 || ansehen <= 0;
     }
 }

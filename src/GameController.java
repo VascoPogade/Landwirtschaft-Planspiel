@@ -67,8 +67,8 @@ int[][] attributes2Change;
     String question17Option1Text = "Ja, die Entscheidung juristisch bekämpfen.";
     String question17Option2Text = "Nein, die Entscheidung akzeptieren. ";
 
-    int[] questions1Attributes1Change = {1, 0, 0, 0, 0, 0, 5};
-    int[] questions1Attributes2Change = {2, 0, 0, 0, 0, 0, 0};
+    int[] questions1Attributes1Change = {1, 0, 0, 0, 0, 0, 100};
+    int[] questions1Attributes2Change = {2, 0, 0, 0, 0, 0, 100};
     int[] questions2Attributes1Change = {-100, 0, 0, 0, 0, 0, 0};
     int[] questions2Attributes2Change = {0, 0, 0, 0, 0, 0, 0};
     int[] questions3Attributes1Change = {0, 0, 0, 0, 0, 0, 0};
@@ -128,14 +128,16 @@ int[][] attributes2Change;
     private void handleOption1() {
         // Implement logic for option 1
         // mainFrame.optionPanel1.setOptionText("New explanatory text for Option 1");
-        changeAttributes();
+        checkRisk();
+        changeAttributesOne();
         nextScenario();
         updateGUI();
     }
 
     private void handleOption2() {
         // Implement logic for option 2
-        changeAttributes();
+        checkRisk();
+        changeAttributesTwo();
         nextScenario();
         updateGUI();
     }
@@ -168,7 +170,7 @@ int[][] attributes2Change;
         mainFrame.scenarioPanel.setScenarioText("Game Ended");
     }
 
-    private void changeAttributes()
+    private void changeAttributesOne()
     {
         player.changeErnte(attributes1Change[scenarioNumber][0]);
         player.changeVermoegen(attributes1Change[scenarioNumber][1]);
@@ -176,6 +178,27 @@ int[][] attributes2Change;
         player.changeNachhaltigkeit(attributes1Change[scenarioNumber][3]);
         player.changeAnsehen(attributes1Change[scenarioNumber][4]);
         player.changeRisiko(attributes1Change[scenarioNumber][5]);
-        updateGUI();
+    }
+
+    private void changeAttributesTwo()
+    {
+        player.changeErnte(attributes2Change[scenarioNumber][0]);
+        player.changeVermoegen(attributes2Change[scenarioNumber][1]);
+        player.changeMitarbeiterzufriedenheit(attributes2Change[scenarioNumber][2]);
+        player.changeNachhaltigkeit(attributes2Change[scenarioNumber][3]);
+        player.changeAnsehen(attributes2Change[scenarioNumber][4]);
+        player.changeRisiko(attributes2Change[scenarioNumber][5]);
+    }
+
+    private void checkRisk()
+    {
+        int risk = player.getRisiko();
+        double random = Math.random() * 100;
+        String []reasontoEndGame = new String[10];
+        System.out.println(risk);
+        System.out.println(random);
+        if (random < risk) {
+            endGame();
+    }
     }
 }
