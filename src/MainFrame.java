@@ -6,6 +6,7 @@ public class MainFrame extends JFrame {
     public OptionPanel optionPanel1;
     public OptionPanel optionPanel2;
     public AttributesPanel attributesPanel;
+    public EndPanel endScreenPanel;
 
     public MainFrame() {
         setTitle("Farm Management Game");
@@ -28,6 +29,23 @@ public class MainFrame extends JFrame {
         add(attributesPanel, BorderLayout.SOUTH);
 
         setVisible(true);
+    }
+
+    public void showEndScreen() {
+        // Create the end screen panel with a caption and an image
+        String caption = "Game Over";
+        ImageIcon image = new ImageIcon("src/resources/Picture_of_Famer_2.png");
+        endScreenPanel = new EndPanel(caption, image);
+
+        // Remove all existing components from the frame
+        getContentPane().removeAll();
+        
+        // Add the end screen panel
+        add(endScreenPanel, BorderLayout.CENTER);
+
+        // Refresh the frame
+        revalidate();
+        repaint();
     }
     
 }
