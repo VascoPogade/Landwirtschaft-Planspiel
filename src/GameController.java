@@ -1,15 +1,13 @@
-import java.util.function.Consumer;
-
 public class GameController {
     private Player player;
     private MainFrame mainFrame;
     int scenarioNumber;
 
-String[] questions;
-String[] options1;
-String[] options2;
-int[][] attributes1Change;
-int[][] attributes2Change;
+    String[] questions;
+    String[] options1;
+    String[] options2;
+    int[][] attributes1Change;
+    int[][] attributes2Change;
 
     String questionText1 = "Bestandsaufnahme nach Vererbung. Es fällt auf es müssen dringend neue Investitionen her. Wohin soll investiert werden?";
     String questionText2 = "Meilensteinentsheidung. Tierethik oder das große Geld?";
@@ -154,7 +152,7 @@ int[][] attributes2Change;
 
     private void nextScenario() {
         // Implement logic to move to the next scenario
-        if (scenarioNumber >= questions.length - 1) {
+        if (scenarioNumber >= (questions.length - 1)) {
             endGame();
         }
 
