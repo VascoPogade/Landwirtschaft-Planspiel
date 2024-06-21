@@ -144,7 +144,7 @@ public class GameController {
         mainFrame.attributesPanel.setAttributeValue(2, player.getMitarbeiterzufriedenheit());
         mainFrame.attributesPanel.setAttributeValue(3, player.getNachhaltigkeit());
         mainFrame.attributesPanel.setAttributeValue(4, player.getAnsehen());
-        // mainFrame.attributesPanel.setAttributeValue(5, (int) (player.getRisiko() * 100));
+        mainFrame.attributesPanel.setAttributeValue(5, player.getRisiko());
     }
 
     private void nextScenario() {
