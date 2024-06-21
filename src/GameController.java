@@ -139,12 +139,12 @@ public class GameController {
 
     private void updateGUI() {
         // Update the GUI with the player's attributes
-        mainFrame.attributesPanel.setAttributeValue(0, player.getErnte());
-        mainFrame.attributesPanel.setAttributeValue(1, player.getVermoegen());
-        mainFrame.attributesPanel.setAttributeValue(2, player.getMitarbeiterzufriedenheit());
-        mainFrame.attributesPanel.setAttributeValue(3, player.getNachhaltigkeit());
-        mainFrame.attributesPanel.setAttributeValue(4, player.getAnsehen());
-        mainFrame.attributesPanel.setAttributeValue(5, player.getRisiko());
+        mainFrame.attributesPanel.setAttributeValue(0, "Ernte", player.getErnte());
+        mainFrame.attributesPanel.setAttributeValue(1, "Vermoegen", player.getVermoegen());
+        mainFrame.attributesPanel.setAttributeValue(2, "Mitarbeiterzufriedenheit", player.getMitarbeiterzufriedenheit());
+        mainFrame.attributesPanel.setAttributeValue(3, "Nachhaltigkeit", player.getNachhaltigkeit());
+        mainFrame.attributesPanel.setAttributeValue(4, "Ansehen", player.getAnsehen());
+        mainFrame.attributesPanel.setAttributeValue(5, "Risiko", player.getRisiko());
     }
 
     private void nextScenario() {

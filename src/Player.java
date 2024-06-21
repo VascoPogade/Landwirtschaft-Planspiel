@@ -9,7 +9,7 @@ public class Player {
 
     public Player() {
         this.ernte = 50;
-        this.vermoegen = 50;
+        this.vermoegen = 500000;
         this.mitarbeiterzufriedenheit = 50;
         this.nachhaltigkeit = 50;
         this.ansehen = 50;

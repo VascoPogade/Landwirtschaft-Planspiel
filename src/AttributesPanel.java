@@ -14,7 +14,7 @@ public class AttributesPanel extends JPanel {
         attributes = new JLabel[6];
 
         Ernte = new JLabel("Ernte: 50");
-        Vermoegen = new JLabel("Vermoegen: 50");
+        Vermoegen = new JLabel("Vermoegen: 50000€");
         Mitarbeiterzufriedenheit = new JLabel("Mitarbeiterzufriedenheit: 50");
         Nachhaltigkeit = new JLabel("Nachhaltigkeit: 50");
         Ansehen = new JLabel("Ansehen: 50");
@@ -33,9 +33,12 @@ public class AttributesPanel extends JPanel {
         }
     }
 
-    public void setAttributeValue(int index, int value) {
-        if (index >= 0 && index < attributes.length) {
-            attributes[index].setText("Attribute " + (index + 1) + ": " + value);
+    public void setAttributeValue(int index, String valueName, int value) {
+        if(index == 1){
+            attributes[index].setText(valueName + ": " + value + "€");
+
+        } else {
+            attributes[index].setText(valueName + ": " + value);
         }
     }
 }
