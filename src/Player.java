@@ -16,7 +16,7 @@ public class Player {
         this.risiko = 5;
     }
 
-    //Implement methods to increase and decrease the player's attributes
+    //methods to increase and decrease the player's attributes
 
     public int getErnte() {
         return ernte;
@@ -42,7 +42,7 @@ public class Player {
         return risiko;
     }
 
-    //Implement methods to change the player's attributes
+    //methods to change the player's attributes
 
     public void changeErnte(int value) {
         ernte += value;
@@ -68,7 +68,7 @@ public class Player {
         risiko += value;
     }
 
-    //Implement a method to check if the player has lost the game
+    //method to check if the player has lost the game
 
     public boolean hasLost() {
         return ernte <= 0 || vermoegen <= 0 || mitarbeiterzufriedenheit <= 0 || nachhaltigkeit <= 0 || ansehen <= 0;

@@ -34,6 +34,7 @@ public class EndPanel extends JPanel {
         JPanel imagePanel = new JPanel(new BorderLayout());
         imagePanel.setBorder(BorderFactory.createEmptyBorder(50, 50, 50, 50)); // Add padding around the image
 
+        // Image label
         JLabel imageLabel = new JLabel(image);
         imageLabel.setHorizontalAlignment(JLabel.CENTER);
         imagePanel.add(imageLabel, BorderLayout.CENTER);

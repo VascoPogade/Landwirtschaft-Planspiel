@@ -13,6 +13,7 @@ public class AttributesPanel extends JPanel {
     public AttributesPanel() {
         attributes = new JLabel[6];
 
+        // Initialize the attribute labels
         Ernte = new JLabel("Ernte: 50");
         Vermoegen = new JLabel("Vermoegen: 50000€");
         Mitarbeiterzufriedenheit = new JLabel("Mitarbeiterzufriedenheit: 50");
@@ -20,6 +21,7 @@ public class AttributesPanel extends JPanel {
         Ansehen = new JLabel("Ansehen: 50");
         Risiko = new JLabel("Risiko: 5");
 
+        // Set the attributes array
         attributes[0] = Ernte;
         attributes[1] = Vermoegen;
         attributes[2] = Mitarbeiterzufriedenheit;
@@ -27,12 +29,14 @@ public class AttributesPanel extends JPanel {
         attributes[4] = Ansehen;
         attributes[5] = Risiko;
 
+        // Set the layout of the panel to a 1x6 grid
         setLayout(new GridLayout(1, 6));
         for (JLabel attribute : attributes) {
             add(attribute);
         }
     }
 
+    // Sets the text of the attribute at the given index
     public void setAttributeValue(int index, String valueName, int value) {
         if(index == 1){
             attributes[index].setText(valueName + ": " + value + "€");

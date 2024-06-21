@@ -9,6 +9,7 @@ public class MainFrame extends JFrame {
     public EndPanel endScreenPanel;
 
     public MainFrame() {
+        // Set up the main frame
         setTitle("Farm Management Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
