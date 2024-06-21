@@ -11,7 +11,6 @@ public class MainFrame extends JFrame {
     public MainFrame() {
         setTitle("Farm Management Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 600);
         setLayout(new BorderLayout());
 
         scenarioPanel = new ScenarioPanel();
@@ -28,6 +27,8 @@ public class MainFrame extends JFrame {
         add(optionsPanel, BorderLayout.CENTER);
         add(attributesPanel, BorderLayout.SOUTH);
 
+        setExtendedState(JFrame.MAXIMIZED_BOTH); // Open in full-screen mode
+        
         setVisible(true);
     }
 
@@ -48,5 +49,4 @@ public class MainFrame extends JFrame {
         revalidate();
         repaint();
     }
-    
 }
