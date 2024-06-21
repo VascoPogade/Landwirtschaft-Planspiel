@@ -124,8 +124,6 @@ public class GameController {
     }
 
     private void handleOption1() {
-        // Implement logic for option 1
-        // mainFrame.optionPanel1.setOptionText("New explanatory text for Option 1");
         checkRisk();
         changeAttributesOne();
         nextScenario();
@@ -133,7 +131,6 @@ public class GameController {
     }
 
     private void handleOption2() {
-        // Implement logic for option 2
         checkRisk();
         changeAttributesTwo();
         nextScenario();
@@ -147,11 +144,11 @@ public class GameController {
         mainFrame.attributesPanel.setAttributeValue(2, player.getMitarbeiterzufriedenheit());
         mainFrame.attributesPanel.setAttributeValue(3, player.getNachhaltigkeit());
         mainFrame.attributesPanel.setAttributeValue(4, player.getAnsehen());
-        // mainFrame.attributesPanel.setAttributeValue(5, (int) (player.getRisiko() * 100));
+        mainFrame.attributesPanel.setAttributeValue(5, player.getRisiko());
     }
 
     private void nextScenario() {
-        // Implement logic to move to the next scenario
+        // logic to move to the next scenario
         if (scenarioNumber >= (questions.length - 1)) {
             endGame();
         }
@@ -161,15 +158,39 @@ public class GameController {
         mainFrame.optionPanel2.setOptionText(options2[scenarioNumber+1]);
 
         scenarioNumber++;
+
+        payout();
+    }
+
+    private void payout() {
+        // logic to calculate the cash that the player gets this round
+        int payout = player.getErnte() * 1000; // max 100000€ per Ernte
+        payout += (player.getMitarbeiterzufriedenheit() - 50) * 50; // max +/- 2500€ per Ernte
+        payout += (player.getNachhaltigkeit() - 50) * 250; // max +/- 12500€ per Ernte
+        payout += (player.getAnsehen() - 50) * 50; // max +/- 2500€ per Ernte
+
+        if(player.getMitarbeiterzufriedenheit() < 15){
+            payout -= 30000;
+        }
+
+        if(player.getNachhaltigkeit() < 15){
+            payout -= 30000;
+        }
+
+        if(player.getAnsehen() < 15){
+            payout -= 30000;
+        }
+
+        player.changeVermoegen(payout);
+        // payout between +82500€ and +117500€ (including penalties between -7500€ and +117500€)
     }
 
     private void endGame() {
-        // Implement logic to end the game
+        // logic to end the game
         mainFrame.showEndScreen();
     }
 
-    private void changeAttributesOne()
-    {
+    private void changeAttributesOne() {
         player.changeErnte(attributes1Change[scenarioNumber][0]);
         player.changeVermoegen(attributes1Change[scenarioNumber][1]);
         player.changeMitarbeiterzufriedenheit(attributes1Change[scenarioNumber][2]);
@@ -178,8 +199,7 @@ public class GameController {
         player.changeRisiko(attributes1Change[scenarioNumber][5]);
     }
 
-    private void changeAttributesTwo()
-    {
+    private void changeAttributesTwo() {
         player.changeErnte(attributes2Change[scenarioNumber][0]);
         player.changeVermoegen(attributes2Change[scenarioNumber][1]);
         player.changeMitarbeiterzufriedenheit(attributes2Change[scenarioNumber][2]);
@@ -188,8 +208,7 @@ public class GameController {
         player.changeRisiko(attributes2Change[scenarioNumber][5]);
     }
 
-    private void checkRisk()
-    {
+    private void checkRisk() {
         int risk = player.getRisiko();
         double random = Math.random() * 100;
         String []reasontoEndGame = new String[10];

@@ -11,7 +11,6 @@ public class MainFrame extends JFrame {
     public MainFrame() {
         setTitle("Farm Management Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 600);
         setLayout(new BorderLayout());
 
         scenarioPanel = new ScenarioPanel();
@@ -28,6 +27,8 @@ public class MainFrame extends JFrame {
         add(optionsPanel, BorderLayout.CENTER);
         add(attributesPanel, BorderLayout.SOUTH);
 
+        setExtendedState(JFrame.MAXIMIZED_BOTH); // Open in full-screen mode
+        
         setVisible(true);
     }
 
@@ -35,7 +36,8 @@ public class MainFrame extends JFrame {
         // Create the end screen panel with a caption and an image
         String caption = "Game Over";
         ImageIcon image = new ImageIcon("src/resources/Picture_of_Famer_2.png");
-        endScreenPanel = new EndPanel(caption, image);
+        String explanation = "You are out of money and your farm is bankrupt. The bank came and took your whole farm away. Better luck next time! jbhwbefbjwbef ibqnwfjbseibvnjibsd ivhaisnvuibo aesnvjbeisba ovniuwbesvdnjkbis avnbwbefhine ufhwe wcwfwv wedwfwqfw wefwqwf wedwd wdwqd";
+        endScreenPanel = new EndPanel(caption, explanation, image);
 
         // Remove all existing components from the frame
         getContentPane().removeAll();
@@ -47,5 +49,4 @@ public class MainFrame extends JFrame {
         revalidate();
         repaint();
     }
-    
 }
