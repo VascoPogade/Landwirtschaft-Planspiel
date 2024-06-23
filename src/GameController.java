@@ -65,7 +65,7 @@ public class GameController {
     String question17Option1Text = "Ja, die Entscheidung juristisch bekämpfen.";
     String question17Option2Text = "Nein, die Entscheidung akzeptieren. ";
 
-    int[] questions1Attributes1Change = {0, -40, +5, +20, +5, -3};
+ int[] questions1Attributes1Change = {0, -40, +5, +20, +5, -3};
     int[] questions1Attributes2Change = {+5, -20, 0, +15, 5, -10};
     int[] questions2Attributes1Change = {0, 20, -15, -30, -10, +10};
     int[] questions2Attributes2Change = {-20, -20, +30, +50, +15, -5};
@@ -85,20 +85,20 @@ public class GameController {
     int[] questions9Attributes2Change = {7, -10, 5, 10, 5, 3};
     int[] questions10Attributes1Change = {10, 15, -30, 5, -5, -5};
     int[] questions10Attributes2Change = {5, 5, +15, +10, +10, -2};
-    int[] questions11Attributes1Change = {};
-    int[] questions11Attributes2Change = {};
-    int[] questions12Attributes1Change = {};
-    int[] questions12Attributes2Change = {};
-    int[] questions13Attributes1Change = {};
-    int[] questions13Attributes2Change = {};
-    int[] questions14Attributes1Change = {};
-    int[] questions14Attributes2Change = {};
-    int[] questions15Attributes1Change = {};
-    int[] questions15Attributes2Change = {};
-    int[] questions16Attributes1Change = {};
-    int[] questions16Attributes2Change = {};
-    int[] questions17Attributes1Change = {};
-    int[] questions17Attributes2Change = {};
+    int[] questions11Attributes1Change = {+20, -10, -20, -10, -40, 20};
+    int[] questions11Attributes2Change = {30, -20, -5, 0, +5, 10};
+    int[] questions12Attributes1Change = {0,0, +2, 4, 1, 50};
+    int[] questions12Attributes2Change = {5, -20, -2, -10, -2, -5};
+    int[] questions13Attributes1Change = {5, -20, +25, 0, 10, 10};
+    int[] questions13Attributes2Change = {-10, +10, -30, 0, -20, 5};
+    int[] questions14Attributes1Change = {20, -30, 0, 0, 10, 20};
+    int[] questions14Attributes2Change = {-10, 10, -5, 0, -10, -10};
+    int[] questions15Attributes1Change = {10, -60, 10, 30, 20, -20};
+    int[] questions15Attributes2Change = {0, 0, -20, 0, -10, +45};
+    int[] questions16Attributes1Change = {20, -40, 15, 20, 20, -10};
+    int[] questions16Attributes2Change = {15, -20, 10, 10, 10, -5};
+    int[] questions17Attributes1Change = {-10, -15, -5, 0, 10, 20};
+    int[] questions17Attributes2Change = {-20, 10, -5, -10, -10, 0};
 
 
 
