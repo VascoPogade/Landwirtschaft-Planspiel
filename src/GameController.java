@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+
 public class GameController {
 private static Player player;
     private MainFrame mainFrame;
+    private ArrayList<String> reasonsToEndGame;
     int scenarioNumber;
 
     String[] questions;
@@ -71,7 +74,7 @@ private static Player player;
     int[] questions2Attributes2Change = {-20, -20, +30, +50, +15, -5};
     int[] questions3Attributes1Change = {50, 30, 20, -30, -50, -40};
     int[] questions3Attributes2Change = {0, 0, 10, 10, 20, 0};
-    int[] questions4Attributes1Change = {0, 20, 0, -5, 10, 10};
+    int[] questions4Attributes1Change = {0, 20, 0, -5, 10, 10000};
     int[] questions4Attributes2Change = {0, 10, 0, 5, 15, 15};
     int[] questions5Attributes1Change = {-10, -20, 0, 20, 15, 10};
     int[] questions5Attributes2Change = {0, -10, -5, -10, -15, 5};
@@ -126,6 +129,15 @@ private static Player player;
     }
 
     private void handleOption1() {
+        if (scenarioNumber == 3) {
+            addReasonsToEndGame("Die Genmanipulierte Pflanze wurde von den Kunden nicht angenommen. Die Kosten für die Neupflanzung und für das Saatgut haben dich in den Ruin getrieben.");
+        }
+        if (scenarioNumber == 5) {
+            addReasonsToEndGame("Die Investition in die Photovoltaik-Anlage hat sich nicht ausgezahlt. Die hohen Investitionskosten und der Verlust von Anbaufläche haben dich in den Ruin getrieben.");
+        }
+        
+        
+        
         checkRisk();
         changeAttributesOne();
         nextScenario();
@@ -216,9 +228,19 @@ private static Player player;
     private void checkRisk() {
         int risk = player.getRisiko();
         double random = Math.random() * 100;
-        String []reasontoEndGame = new String[10];
+        reasonsToEndGame = new ArrayList<>();
+        int randomNum = (int)Math.random() * reasonsToEndGame.size();
+        System.out.println("risk: " + risk);
+        System.out.println("random" + random);;
         if (random < risk) {
+            mainFrame.set_riskFlag(1);
+            System.out.println("das Flag" + mainFrame.get_riskFlag());
             endGame();
     }
+    }
+
+
+    private void addReasonsToEndGame(String reason) {
+        reasonsToEndGame.add(reason);
     }
 }

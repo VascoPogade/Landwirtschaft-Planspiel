@@ -7,8 +7,10 @@ public class MainFrame extends JFrame {
     public OptionPanel optionPanel2;
     public AttributesPanel attributesPanel;
     public EndPanel endScreenPanel;
+    public int riskFlag;
 
     public MainFrame() {
+        this.riskFlag = 0;
         // Set up the main frame
         setTitle("Farm Management Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,39 +35,54 @@ public class MainFrame extends JFrame {
         setVisible(true);
     }
 
+    public int get_riskFlag() {
+        return riskFlag;
+    }
+
+    public void set_riskFlag(int riskFlag) {
+        this.riskFlag = riskFlag;
+    }
+
     public void showEndScreen() {
         String  caption;
         String explanation;
         ImageIcon image;
         Player player = GameController.getPlayer();
         // TODO: Bilder durch richtige Bilder ersetzen
+        if (get_riskFlag() == 1) { 
+            // TODO: aus der risikoMethode den richtigen Grund aus Array ziehen
+            caption = "Deine Farm ging zu hohes Risiko ein";
+            explanation = "Vlavla";
+            image = new ImageIcon("src/resources/beispiel.png");
+        }
+    else {
         if (player.getVermoegen() <= 0) {
             caption = "Bankrott";
             explanation = "Schulden über Schulden. Die Farm gehört nun der Bank.";
             image = new ImageIcon("src/resources/beispiel.png");
-        } else if (player.getNachhaltigkeit() < 15) {
+        } else if (player.getNachhaltigkeit() < 0) {
             caption = "Ökologisches Desaster";
             explanation = "Deine Farm verschmutzt die Umwelt. Landesweite Proteste zwingen dich, die Farm zu schließen.";
             image = new ImageIcon("src/resources/beispiel.png");
-        } else if (player.getAnsehen() < 15) {
+        } else if (player.getAnsehen() < 0) {
             caption = "Widerstand der Gemeinschaft";
             explanation = "Die Gemeinschaft lehnt deine Anbaumethoden ab. Deine Farm verliert an Ansehen und Marktanteil.";
             image = new ImageIcon("src/resources/beispiel.png");
-        } else if (player.getErnte() < 15) {  
+        } else if (player.getErnte() < 0) {  
             caption = "Missernte";
             explanation = "Die Ernte ist zu gering ausgefallen. Du kannst deine Verpflichtungen nicht erfüllen und musst die Farm schließen.";
             image = new ImageIcon("src/resources/poor_harvest_image.png");
-        } else if (player.getMitarbeiterzufriedenheit() < 15) {  // Assuming 'Mitarbeiterzufriedenheit' represents employee satisfaction
+        } else if (player.getMitarbeiterzufriedenheit() < 0) {  // Assuming 'Mitarbeiterzufriedenheit' represents employee satisfaction
             caption = "Mitarbeiteraufstand";
             explanation = "Deine Mitarbeiter sind nicht zufrieden wie du deine Farm leitest. Die Arbeiter streiken, und die Farm kann nicht weiter betrieben werden.";
             image = new ImageIcon("src/resources/beispiel.png");
         } else {
-            // Default or fallback scenario if none of the above conditions are met
+            // Gewinner Screen
             caption = "Spiel vorbei";
             explanation = "Spiel vorbei aus unbekannten Gründen.";
             image = new ImageIcon("src/resources/default_image.png");
-        }
-        
+        } 
+    }
 
         // Create the end screen panel with the determined content
         endScreenPanel = new EndPanel(caption, explanation, image);
