@@ -136,10 +136,6 @@ private static Player player;
     }
 
     private void handleOption1() {
-        if (((player.getVermoegen() + attributes1Change[scenarioNumber + 2][1]) < 0) || (player.getVermoegen() + attributes2Change[scenarioNumber + 2][1]) < 0){
-            mainFrame.displayMessage("Wenn sie bei der nächsten Frage die falsche Option wählen gehen sie Bankrott", "Warnung");
-        }
-
         if (scenarioNumber == 0) {
             reasonsToEndGame.add("Dein Onkel besaß unbekannte Schulden bei einer lokalen Bank. Die Schulden wurden auf dich übertragen und haben dich in den Ruin getrieben.");
         }
@@ -185,9 +181,6 @@ private static Player player;
     }
 
     private void handleOption2() {
-        if (((player.getVermoegen() + attributes1Change[scenarioNumber + 2][1]) < 0) || (player.getVermoegen() + attributes2Change[scenarioNumber + 2][1]) < 0){
-            mainFrame.displayMessage("Wenn sie bei der nächsten Frage die falsche Option wählen gehen sie Bankrott", "Warnung");
-        }
         if (scenarioNumber == 3) {
             reasonsToEndGame.add("Deine Konkurrenz setzte auf genmanipulierte Pflanzen mit höherer Resistenz und besseren Erträgen, was dich nach und nach aus dem Markt drängte.");
         }

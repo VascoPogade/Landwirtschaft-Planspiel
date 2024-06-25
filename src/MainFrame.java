@@ -95,8 +95,4 @@ public class MainFrame extends JFrame {
         revalidate();
         repaint();
     }
-
-    public void displayMessage(String message, String title) {
-        JOptionPane.showMessageDialog(this, message, title, JOptionPane.ERROR_MESSAGE);
-    }
 }
