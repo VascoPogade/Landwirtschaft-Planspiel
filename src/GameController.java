@@ -307,9 +307,4 @@ private static Player player;
             }
         }
     }
-
-
-    private void addReasonsToEndGame(String reason) {
-        reasonsToEndGame.add(reason);
-    }
 }
