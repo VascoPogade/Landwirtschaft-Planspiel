@@ -32,7 +32,6 @@ private static Player player;
                 "Der Farmer plant, ein Internet of Things (IoT)-System zu installieren, um Echtzeitdaten über Bodenfeuchtigkeit, Wetter und Pflanzenwachstum zu erhalten.";
     String questionText17 = "Die Regierung will eine zentrale Landstraße über ihren Acker bauen. Wollen Sie diese Entscheidung juristisch bekämpfen?\n\nIn deiner Nähe plant ein großes Industrieunternehmen eine Fabrik. Um diese Fabrik zu fördern, plant die Regierung den Bau einer Bundestraße über deinen Acker. Willst du diese Entscheidung juristisch bekämpfen?";
 
-    // TODO: teure technologien vielleicht nach unten, da am Anfang viele teure Investitionen stehen
     String question1Option1Text = "Studium in die Richtung Energiesparende Technologien";
     String question1Option2Text = "Im Bereich Optimierung von Anbaustrategien studieren";
     String question2Option1Text = "Du setzt auf preiswertes Fleisch um Konkurenzfähig zu bleiben und setzt auf Massentierhaltung";
@@ -69,14 +68,13 @@ private static Player player;
     String question17Option1Text = "Ja, die Entscheidung juristisch bekämpfen.";
     String question17Option2Text = "Nein, die Entscheidung akzeptieren. ";
 
-    //(Ernte, Vermögen, Mitarbeiterzufriedenheit, Nachhaltigkeit, Ansehen, Risiko)
+    // Aufbau: (Ernte, Vermögen, Mitarbeiterzufriedenheit, Nachhaltigkeit, Ansehen, Risiko)
     int[] questions1Attributes1Change = {0, 0, 0, 20, 0, 0};
     int[] questions1Attributes2Change = {20, 0, 0, 0, 0, 0};
     int[] questions2Attributes1Change = {0, 0, -20, -30, -10, +10};
     int[] questions2Attributes2Change = {-30, -20000, +10, +30, +10, -10};
     int[] questions3Attributes1Change = {50, -5000, 20, -30, -50, 10};
     int[] questions3Attributes2Change = {0, 0, 10, 10, 20, -10};
-    //TODO: Vasco fragen wie sich das Geld und risiko technisch auswirkt
     int[] questions4Attributes1Change = {0, 20, 0, -5, 10, 5};
     int[] questions4Attributes2Change = {0, 10, 0, 5, 15, 5};
     int[] questions5Attributes1Change = {-10, -50000, 0, 20, 15, 10};
