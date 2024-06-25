@@ -64,15 +64,15 @@ public class MainFrame extends JFrame {
             caption = "Ökologisches Desaster";
             explanation = "Deine Farm verschmutzt die Umwelt. Landesweite Proteste zwingen dich, die Farm zu schließen.";
             image = new ImageIcon("src/resources/beispiel.png");
-        } else if (player.getAnsehen() < 0) {
+        } else if (player.getAnsehen() <= 0) {
             caption = "Widerstand der Gemeinschaft";
             explanation = "Die Gemeinschaft lehnt deine Anbaumethoden ab. Deine Farm verliert an Ansehen und Marktanteil.";
             image = new ImageIcon("src/resources/beispiel.png");
-        } else if (player.getErnte() < 0) {  
+        } else if (player.getErnte() <= 0) {  
             caption = "Missernte";
             explanation = "Die Ernte ist zu gering ausgefallen. Du kannst deine Verpflichtungen nicht erfüllen und musst die Farm schließen.";
             image = new ImageIcon("src/resources/poor_harvest_image.png");
-        } else if (player.getMitarbeiterzufriedenheit() < 0) {  // Assuming 'Mitarbeiterzufriedenheit' represents employee satisfaction
+        } else if (player.getMitarbeiterzufriedenheit() <= 0) {  // Assuming 'Mitarbeiterzufriedenheit' represents employee satisfaction
             caption = "Mitarbeiteraufstand";
             explanation = "Deine Mitarbeiter sind nicht zufrieden wie du deine Farm leitest. Die Arbeiter streiken, und die Farm kann nicht weiter betrieben werden.";
             image = new ImageIcon("src/resources/beispiel.png");

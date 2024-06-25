@@ -70,9 +70,9 @@ private static Player player;
 
  int[] questions1Attributes1Change = {0, 0, 0, 20, 0, 0};
     int[] questions1Attributes2Change = {20, 0, 0, 0, 0, 0};
-    int[] questions2Attributes1Change = {0, 20, -15, -30, -10, +10};
-    int[] questions2Attributes2Change = {-20, -20, +30, +50, +15, -5};
-    int[] questions3Attributes1Change = {50, 30, 20, -30, -50, -40};
+    int[] questions2Attributes1Change = {0, 20000, -15, -30, -10, +10};
+    int[] questions2Attributes2Change = {-20, -20000, +30, +50, +15, -5};
+    int[] questions3Attributes1Change = {50, -5000, 20, -30, -50, -40};
     int[] questions3Attributes2Change = {0, 0, 10, 10, 20, 0};
     int[] questions4Attributes1Change = {0, 20, 0, -5, 10, 10000};
     int[] questions4Attributes2Change = {0, 10, 0, 5, 15, 15};
