@@ -19,7 +19,7 @@ public class AttributesPanel extends JPanel {
         Mitarbeiterzufriedenheit = new JLabel("Mitarbeiterzufriedenheit: 50");
         Nachhaltigkeit = new JLabel("Nachhaltigkeit: 50");
         Ansehen = new JLabel("Ansehen: 50");
-        Risiko = new JLabel("Risiko: 5");
+        Risiko = new JLabel("Risiko: 5%");
 
         // Set the attributes array
         attributes[0] = Ernte;
@@ -40,7 +40,12 @@ public class AttributesPanel extends JPanel {
     public void setAttributeValue(int index, String valueName, int value) {
         if(index == 1){
             attributes[index].setText(valueName + ": " + value + "€");
-
+        } else if (index == 5) {
+            if(value > 0) {
+                attributes[index].setText(valueName + ": " + value + "%");
+            } else {
+                attributes[index].setText(valueName + ": " + 0 + "%");
+            }
         } else {
             attributes[index].setText(valueName + ": " + value);
         }

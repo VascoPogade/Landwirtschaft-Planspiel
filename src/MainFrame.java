@@ -53,7 +53,6 @@ public class MainFrame extends JFrame {
         if (get_riskFlag() == 1) { 
             caption = "Dein Hof ging zu hohe Risiken ein";
             explanation = reason;
-            System.out.println("Der Grund ist: " + reason);
             image = new ImageIcon("src/resources/Picture_of_Famer_2.png");
         } else {
             if (player.getVermoegen() <= 0) {
@@ -99,7 +98,6 @@ public class MainFrame extends JFrame {
     }
 
     public void displayMessage(String message, String title) {
-        System.out.println("11212121212121212121212121212121212");
         JOptionPane.showMessageDialog(this, message, title, JOptionPane.ERROR_MESSAGE);
     }
 }
