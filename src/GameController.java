@@ -74,7 +74,7 @@ private static Player player;
     int[] questions2Attributes2Change = {-20, -20000, +30, +50, +15, -5};
     int[] questions3Attributes1Change = {50, -5000, 20, -30, -50, -40};
     int[] questions3Attributes2Change = {0, 0, 10, 10, 20, 0};
-    //TODO: Vasco fragen
+    //TODO: Vasco fragen wie sich das Geld und risiko technisch auswirkt
     int[] questions4Attributes1Change = {0, 20, 0, -5, 10, 15};
     int[] questions4Attributes2Change = {0, 10, 0, 5, 15, 15};
     int[] questions5Attributes1Change = {-10, -50000, 0, 20, 15, 10};
@@ -136,32 +136,38 @@ private static Player player;
     }
 
     private void handleOption1() {
-        //TODO: schöner umschreiben
         if (scenarioNumber == 3) {
-            reasonsToEndGame.add("Die Genmanipulierte Pflanze wurde von den Kunden nicht angenommen. Die Kosten für die Neupflanzung und für das Saatgut haben dich in den Ruin getrieben.");
+            reasonsToEndGame.add("Die genmanipulierte Pflanze wurde von den Kunden nicht angenommen. Die Kosten für die Neupflanzung und das Saatgut haben dich in den Ruin getrieben.");
         }
+        
         if (scenarioNumber == 5) {
             reasonsToEndGame.add("Die Investition in die Photovoltaik-Anlage hat sich nicht ausgezahlt. Die hohen Investitionskosten und der Verlust von Anbaufläche haben dich in den Ruin getrieben.");
         }
+        
         if (scenarioNumber == 6) {
-            reasonsToEndGame.add("Die Konkurrenz hat dich aus dem Markt gedrängt. Die Diversifizierung deiner Produktpalette haben deine Kunden nicht angenommen. ");
+            reasonsToEndGame.add("Die Konkurrenz hat dich aus dem Markt gedrängt. Die Diversifizierung deiner Produktpalette wurde von deinen Kunden nicht angenommen.");
         }
-        //TODO: Platzhalter ersetzen
+        //TODO: Platzhalter technologie ersetzen
         if (scenarioNumber == 8) {
-            reasonsToEndGame.add("Die Investiotion in neue Technologie hat sich gelohnt. Die Anschaffung allerdings extrem kostenspielieg. Leider Ist der neue Traktor kaputt und du und deine Farm im Ruin");
+            reasonsToEndGame.add("Die Investition in neue Technologie hat sich gelohnt, jedoch war die Anschaffung extrem kostspielig. Der neue Traktor ist leider kaputtgegangen und hat dich sowie deine Farm in den Ruin getrieben.");
         }
+        
         if (scenarioNumber == 11) {
-            reasonsToEndGame.add("Du hast deine Arbeitskräfte während der Hauptsaison zu stark ausgebeutet. Reihenweise Kündigungen und keine neuen Bewerber auf die Stellen trieben deine Farm in den Ruin.");
+            reasonsToEndGame.add("Du hast deine Arbeitskräfte während der Hauptsaison zu stark ausgebeutet. Massenweise Kündigungen und fehlende neue Bewerber haben deine Farm in den Ruin getrieben.");
         }
+        
         if (scenarioNumber == 14) {
             reasonsToEndGame.add("Du hast einen großen Kredit aufgenommen, um das Land deines Nachbarn zu erwerben. Die hohen Zinsen und die Tilgung des Kredits haben dich in den Ruin getrieben.");
         }
+        
         if (scenarioNumber == 15) {
-            reasonsToEndGame.add("Die Investition in ein neues Bewässerungssystem hat sich nicht ausgezahlt. Die hohen Investitionskosten und die falschen Berechnungen der Meteorologen haben dich in den Ruin getrieben.");
+            reasonsToEndGame.add("Die Investition in ein neues Bewässerungssystem hat sich nicht ausgezahlt. Hohe Investitionskosten und fehlerhafte Berechnungen der Meteorologen haben dich in den Ruin getrieben.");
         }
+        
         if (scenarioNumber == 16) {
-            reasonsToEndGame.add("Die Investition in ein umfassendes IoT-System hat sich nicht ausgezahlt. Die hohen Investitionskosten und die fehlende Akzeptanz der Technologie haben dich in den Ruin getrieben.");
+            reasonsToEndGame.add("Die Investition in ein umfassendes IoT-System hat sich nicht ausgezahlt. Die hohen Investitionskosten und die mangelnde Akzeptanz der Technologie haben dich in den Ruin getrieben.");
         }
+        
         
         checkRisk();
         changeAttributesOne();
@@ -171,29 +177,37 @@ private static Player player;
 
     private void handleOption2() {
         if (scenarioNumber == 3) {
-            reasonsToEndGame.add("Deine Konkurenz setzte auf die Genmanipulierte Pflanze. Durch höhere resistenz und bessere Ertäge wurdest du nach und nach aus dem Markt gedrängt");
+            reasonsToEndGame.add("Deine Konkurrenz setzte auf genmanipulierte Pflanzen mit höherer Resistenz und besseren Erträgen, was dich nach und nach aus dem Markt drängte.");
         }
+        
         if (scenarioNumber == 6) {
-            reasonsToEndGame.add("Der lang anhaltende Preiskrampf mit der Konkurenz hat dich in den Ruin getrieben.");
+            reasonsToEndGame.add("Der lang anhaltende Preiskampf mit der Konkurrenz hat dich in den Ruin getrieben.");
         }
+        
         if (scenarioNumber == 7) {
-            reasonsToEndGame.add("Öffentliche Kritik an deiner restriktiven Umsetzung der Sicherheitsregularien und sich häufende Arbeitsauffälle haben dazu geführt das deine Farm von den Behörden geshlossen wurde.");
+            reasonsToEndGame.add("Öffentliche Kritik an deiner restriktiven Umsetzung der Sicherheitsregularien und häufige Arbeitsunfälle führten zur Schließung deiner Farm durch die Behörden.");
         }
-        if (scenarioNumber ==  9){
-            reasonsToEndGame.add("Die gekauften gebrauchten Geräte haben sich als Fehlinvestition herausgestellt. Die hohen Reparaturkosten und die geringe Effizienz haben dich in den Ruin getrieben.");
+        
+        if (scenarioNumber == 9) {
+            reasonsToEndGame.add("Die gekauften gebrauchten Geräte haben sich als Fehlinvestition herausgestellt. Hohe Reparaturkosten und geringe Effizienz haben dich in den Ruin getrieben.");
         }
-        if (scenarioNumber ==  12){
-            reasonsToEndGame.add("Der großflächige massive Einsatz von Pestiziden haben deinen Feldern nachhaltig geschadet. Nichts wächst mehr und du bist ruiniert.");
+        
+        if (scenarioNumber == 12) {
+            reasonsToEndGame.add("Der großflächige massive Einsatz von Pestiziden hat deinen Feldern nachhaltig geschadet. Nichts wächst mehr, und du bist ruiniert.");
         }
-        if (scenarioNumber ==  15){
-            reasonsToEndGame.add("Die Meteorologen hatten recht. Es wurde ein heißer Sommer und das Wasser ging aus. Deine Felder sind vertrocknet und du bist ruiniert.");
+        
+        if (scenarioNumber == 15) {
+            reasonsToEndGame.add("Die Meteorologen behielten recht. Ein heißer Sommer führte zum Wassermangel, deine Felder vertrockneten, und du bist ruiniert.");
         }
-        if (scenarioNumber ==  16){
-            reasonsToEndGame.add("Durch die Nutzung eines Basis-IOT hat sich deine Knkrurenz einen Vorteil verschafft, denn sie nutze Hochmoderne geräte. Du bist ruiniert.");
+        
+        if (scenarioNumber == 16) {
+            reasonsToEndGame.add("Die Konkurrenz nutzte hochmoderne Geräte durch die Implementierung eines Basis-IoT, was dir einen entscheidenden Nachteil verschaffte. Du bist ruiniert.");
         }
-        if (scenarioNumber ==  17){
-            reasonsToEndGame.add("Über die neue Bundesstraße werden Schadstoffe auf deine Felder getragen. kaum noch etwas wächst und du bist ruiniert.");
+        
+        if (scenarioNumber == 17) {
+            reasonsToEndGame.add("Durch die neue Bundesstraße gelangen Schadstoffe auf deine Felder. Kaum noch etwas wächst, und du bist ruiniert."); // Möglicherweise zu unrealistisch
         }
+        
 
 
         checkRisk();
@@ -213,7 +227,6 @@ private static Player player;
     }
 
     private void nextScenario() {
-        // TODO: Endscreens einbauen falls wert gedropt ist
         if (player.getNachhaltigkeit() <= 0 || player.getErnte() <= 0 || player.getVermoegen() <= 0 || player.getMitarbeiterzufriedenheit() <= 0 || player.getAnsehen() <= 0) {
             endGame("Platzhalter");
         }
@@ -233,9 +246,9 @@ private static Player player;
     private void payout() {
         // logic to calculate the cash that the player gets this round
         int payout = player.getErnte() * 100; // max 100000€ per Ernte
-        // payout += (player.getMitarbeiterzufriedenheit() - 50) * 50; // max +/- 2500€ per Ernte
-        // payout += (player.getNachhaltigkeit() - 50) * 250; // max +/- 12500€ per Ernte
-        // payout += (player.getAnsehen() - 50) * 50; // max +/- 2500€ per Ernte
+        payout += (player.getMitarbeiterzufriedenheit() - 50) * 50; // max +/- 2500€ per Ernte
+        payout += (player.getNachhaltigkeit() - 50) * 250; // max +/- 12500€ per Ernte
+        payout += (player.getAnsehen() - 50) * 50; // max +/- 2500€ per Ernte
 
         if(player.getMitarbeiterzufriedenheit() < 50){
             payout -= 30000;

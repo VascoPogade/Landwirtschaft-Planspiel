@@ -51,39 +51,37 @@ public class MainFrame extends JFrame {
         Player player = GameController.getPlayer();
         // TODO: Bilder durch richtige Bilder ersetzen
         if (get_riskFlag() == 1) { 
-            System.out.println("das riskFlag ist: " + get_riskFlag());
             caption = "Deine Farm ging zu hohes Risiko ein";
             explanation = reason;
-            System.out.println("das reason ist: " + reason);
-            image = new ImageIcon("src/resources/beispiel.png");
-        }
-    else {
-        if (player.getVermoegen() <= 0) {
-            caption = "Bankrott";
-            explanation = "Schulden über Schulden. Die Farm gehört nun der Bank.";
-            image = new ImageIcon("src/resources/beispiel.png");
-        } else if (player.getNachhaltigkeit() < 0) {
-            caption = "Ökologisches Desaster";
-            explanation = "Deine Farm verschmutzt die Umwelt. Landesweite Proteste zwingen dich, die Farm zu schließen.";
-            image = new ImageIcon("src/resources/beispiel.png");
-        } else if (player.getAnsehen() <= 0) {
-            caption = "Widerstand der Gemeinschaft";
-            explanation = "Die Gemeinschaft lehnt deine Anbaumethoden ab. Deine Farm verliert an Ansehen und Marktanteil.";
-            image = new ImageIcon("src/resources/beispiel.png");
-        } else if (player.getErnte() <= 0) {  
-            caption = "Missernte";
-            explanation = "Die Ernte ist zu gering ausgefallen. Du kannst deine Verpflichtungen nicht erfüllen und musst die Farm schließen.";
-            image = new ImageIcon("src/resources/poor_harvest_image.png");
-        } else if (player.getMitarbeiterzufriedenheit() <= 0) {  // Assuming 'Mitarbeiterzufriedenheit' represents employee satisfaction
-            caption = "Mitarbeiteraufstand";
-            explanation = "Deine Mitarbeiter sind nicht zufrieden wie du deine Farm leitest. Die Arbeiter streiken, und die Farm kann nicht weiter betrieben werden.";
+            System.out.println("Der Grund ist: " + reason);
             image = new ImageIcon("src/resources/beispiel.png");
         } else {
-            // Gewinner Screen
-            caption = "Spiel vorbei";
-            explanation = "Spiel vorbei aus unbekannten Gründen.";
-            image = new ImageIcon("src/resources/default_image.png");
-        } 
+            if (player.getVermoegen() <= 0) {
+                caption = "Bankrott";
+                explanation = "Schulden über Schulden. Die Farm gehört nun der Bank.";
+                image = new ImageIcon("src/resources/beispiel.png");
+            } else if (player.getNachhaltigkeit() < 0) {
+                caption = "Ökologisches Desaster";
+                explanation = "Deine Farm verschmutzt die Umwelt. Landesweite Proteste zwingen dich, die Farm zu schließen.";
+                image = new ImageIcon("src/resources/beispiel.png");
+            } else if (player.getAnsehen() <= 0) {
+                caption = "Widerstand der Gemeinschaft";
+                explanation = "Die Gemeinschaft lehnt deine Anbaumethoden ab. Deine Farm verliert an Ansehen und Marktanteil.";
+                image = new ImageIcon("src/resources/beispiel.png");
+            } else if (player.getErnte() <= 0) {  
+                caption = "Missernte";
+                explanation = "Die Ernte ist zu gering ausgefallen. Du kannst deine Verpflichtungen nicht erfüllen und musst die Farm schließen.";
+                image = new ImageIcon("src/resources/poor_harvest_image.png");
+            } else if (player.getMitarbeiterzufriedenheit() <= 0) {  // Assuming 'Mitarbeiterzufriedenheit' represents employee satisfaction
+                caption = "Mitarbeiteraufstand";
+                explanation = "Deine Mitarbeiter sind nicht zufrieden wie du deine Farm leitest. Die Arbeiter streiken, und die Farm kann nicht weiter betrieben werden.";
+                image = new ImageIcon("src/resources/beispiel.png");
+            } else {
+                // Gewinner Screen
+                caption = "Spiel vorbei";
+                explanation = "Spiel vorbei aus unbekannten Gründen.";
+                image = new ImageIcon("src/resources/default_image.png");
+            } 
     }
 
         // Create the end screen panel with the determined content
