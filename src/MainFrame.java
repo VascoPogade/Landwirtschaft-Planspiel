@@ -47,7 +47,6 @@ public class MainFrame extends JFrame {
         String  caption;
         String explanation;
         ImageIcon image;
-        int scenarioNumber = GameController.getScenarioNumber();
         Player player = GameController.getPlayer();
         // TODO: Bilder durch richtige Bilder ersetzen
         if (get_riskFlag() == 1) { 
