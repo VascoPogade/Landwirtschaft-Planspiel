@@ -97,4 +97,9 @@ public class MainFrame extends JFrame {
         revalidate();
         repaint();
     }
+
+    public void displayMessage(String message, String title) {
+        System.out.println("11212121212121212121212121212121212");
+        JOptionPane.showMessageDialog(this, message, title, JOptionPane.ERROR_MESSAGE);
+    }
 }
