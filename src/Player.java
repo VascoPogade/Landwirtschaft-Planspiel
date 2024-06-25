@@ -45,7 +45,11 @@ public class Player {
     //methods to change the player's attributes
 
     public void changeErnte(int value) {
-        ernte += value;
+        if(ernte + value > 100) {
+            ernte = 100;
+        } else {
+            ernte += value;
+        }
     }
 
     public void changeVermoegen(int value) {
@@ -53,19 +57,35 @@ public class Player {
     }
 
     public void changeMitarbeiterzufriedenheit(int value) {
-        mitarbeiterzufriedenheit += value;
+        if(mitarbeiterzufriedenheit + value > 100) {
+            mitarbeiterzufriedenheit = 100;
+        } else {
+            mitarbeiterzufriedenheit += value;
+        }
     }
 
     public void changeNachhaltigkeit(int value) {
-        nachhaltigkeit += value;
+        if(nachhaltigkeit + value > 100) {
+            nachhaltigkeit = 100;
+        } else {
+            nachhaltigkeit += value;
+        }
     }
 
     public void changeAnsehen(int value) {
-        ansehen += value;
+        if(ansehen + value > 100) {
+            ansehen = 100;
+        } else {
+            ansehen += value;
+        }
     }
 
     public void changeRisiko(int value) {
-        risiko += value;
+        if(risiko + value > 100) {
+            risiko = 100;
+        } else {
+            risiko += value;
+        }
     }
 
     //method to check if the player has lost the game
