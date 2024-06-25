@@ -300,9 +300,12 @@ private static Player player;
         if (random < risk && !reasonsToEndGame.isEmpty()) {
             int randomNum = (int)(Math.random() * reasonsToEndGame.size());
             mainFrame.set_riskFlag(1);
-            System.out.println("das Flag" + mainFrame.get_riskFlag());
-            endGame(reasonsToEndGame.get(randomNum - 1));
-    }
+            if(randomNum == 0){
+                endGame(reasonsToEndGame.get(randomNum));
+            }else {
+                endGame(reasonsToEndGame.get(randomNum - 1));
+            }
+        }
     }
 
 
