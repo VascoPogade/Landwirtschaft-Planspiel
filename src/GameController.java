@@ -32,79 +32,84 @@ private static Player player;
                 "Der Farmer plant, ein Internet of Things (IoT)-System zu installieren, um Echtzeitdaten über Bodenfeuchtigkeit, Wetter und Pflanzenwachstum zu erhalten.";
     String questionText17 = "Die Regierung will eine zentrale Landstraße über ihren Acker bauen. Wollen Sie diese Entscheidung juristisch bekämpfen?\n\nIn deiner Nähe plant ein großes Industrieunternehmen eine Fabrik. Um diese Fabrik zu fördern, plant die Regierung den Bau einer Bundestraße über deinen Acker. Willst du diese Entscheidung juristisch bekämpfen?";
 
+//(Ernte, Vermögen, Mitarbeiterzufriedenheit, Nachhaltigkeit, Ansehen, Risiko)
+int[] questions1Attributes1Change = {0, 0, 0, 20, 0, 0};
+int[] questions1Attributes2Change = {20, 0, 0, 0, 0, 0};
+int[] questions2Attributes1Change = {0, 0, -20, -30, -10, +10};
+int[] questions2Attributes2Change = {-30, -20000, +10, +30, +10, -10};
+int[] questions3Attributes1Change = {50, -5000, 20, -30, -50, 10};
+int[] questions3Attributes2Change = {0, 0, 10, 10, 20, -10};
+//TODO: Vasco fragen wie sich das Geld und risiko technisch auswirkt
+int[] questions4Attributes1Change = {0, 20, 0, -5, 10, 5};
+int[] questions4Attributes2Change = {0, 10, 0, 5, 15, 5};
+int[] questions5Attributes1Change = {-10, -50000, 0, 20, 15, 10};
+int[] questions5Attributes2Change = {0, -10, -5, -10, -15, 5};
+int[] questions6Attributes1Change = {10, -5000, 5, 10, 15, -5};
+int[] questions6Attributes2Change = {0, -15000, -7, 0, 20, 15};
+int[] questions7Attributes1Change = {0, -5000, +30, 20, 50, -10};
+int[] questions7Attributes2Change = {0, 0, -40, -20, -50, +30};
+int[] questions8Attributes1Change = {10, -100000, -5, 5, 10, -15};
+int[] questions8Attributes2Change = {-5, -1000, +10, -5, -10, +5};
+int[] questions9Attributes1Change = {+15, -200000, +15, -5, 10, -15};
+int[] questions9Attributes2Change = {7, -75000, 5, 10, 5, 5};
+int[] questions10Attributes1Change = {10, -20000, -30, 5, -5, 0};
+int[] questions10Attributes2Change = {5, -10000, +15, +10, +10, -5};
+int[] questions11Attributes1Change = {+20, -1000, -20, -10, -40, 20};
+int[] questions11Attributes2Change = {30, -2000, -5, 0, +5, -10};
+int[] questions12Attributes1Change = {0,0, +2, 4, 1, 40};
+int[] questions12Attributes2Change = {5, -1000, -2, -10, -2, -5};
+int[] questions13Attributes1Change = {5, -2000, +25, 0, 10, 10};
+int[] questions13Attributes2Change = {-10, 0, -30, 0, -20, 5};
+int[] questions14Attributes1Change = {20, -250000, 0, 0, 10, 20};
+int[] questions14Attributes2Change = {-10, 0, -5, 0, -10, -10};
+int[] questions15Attributes1Change = {10, -75000, 10, 30, 20, -20};
+int[] questions15Attributes2Change = {0, 0, -20, 0, -10, +45};
+int[] questions16Attributes1Change = {20, -400000, 15, 20, 20, -10};
+int[] questions16Attributes2Change = {15, -20000, 10, 10, 10, -5};
+int[] questions17Attributes1Change = {-10, -40000, -5, 0, 10, 10};
+int[] questions17Attributes2Change = {-20, 0, -5, -10, -10, 5};
+
+
+
+
     // TODO: teure technologien vielleicht nach unten, da am Anfang viele teure Investitionen stehen
     String question1Option1Text = "Studium in die Richtung Energiesparende Technologien";
     String question1Option2Text = "Im Bereich Optimierung von Anbaustrategien studieren";
     String question2Option1Text = "Du setzt auf preiswertes Fleisch um Konkurenzfähig zu bleiben und setzt auf Massentierhaltung";
-    String question2Option2Text = "Auf kosten deiner Ernte baust du Felder um um darauf deinen Tieren mehr auslauf zu geben";
-    String question3Option1Text = "Komplette Saatgut austauschen und auf die neue Pflanze setzen";
+    String question2Option2Text = "Auf kosten deiner Ernte baust du Felder um um darauf deinen Tieren mehr auslauf zu geben (" + questions2Attributes2Change[1] + "€)";
+    String question3Option1Text = "Komplette Saatgut austauschen und auf die neue Pflanze setzen (" + questions3Attributes1Change[1] + "€)";
     String question3Option2Text = "Beim alten Saatgut ohne gentechnik bleiben";
     String question4Option1Text = "Mit einer großen Supermarktkette kollaborieren.";
     String question4Option2Text = "Eine Direct-To-Consumer Online-Plattform aufbauen.";
-    String question5Option1Text = "Ja, Photovoltaik-Anlage installieren.";
+    String question5Option1Text = "Ja, Photovoltaik-Anlage installieren. (" + questions5Attributes1Change[1] + "€)";
     String question5Option2Text = "Nein, keine Photovoltaik-Anlage installieren und auf traditionelle Energiequellen setzen.";
-    String question6Option1Text = "Diversifizierung der Produktpalette um sich von der Konkurenz abzuheben und auf Nischenprodukte setzen";
-    String question6Option2Text = "Preissenkung, um wettbewerbsfähig zu bleiben";
-    String question7Option1Text = "Strikte Umsetzung und Verbesserung der Regularien";
+    String question6Option1Text = "Diversifizierung der Produktpalette um sich von der Konkurenz abzuheben und auf Nischenprodukte setzen (" + questions6Attributes1Change[1] + "€)";
+    String question6Option2Text = "Preissenkung, um wettbewerbsfähig zu bleiben (" + questions6Attributes2Change[1] + "€)";
+    String question7Option1Text = "Strikte Umsetzung und Verbesserung der Regularien (" + questions7Attributes1Change[1] + "€)";
     String question7Option2Text = "Minimale Umsetzung der Regularien beibehalten";
     //Platzhalter Traktor
-    String question8Option1Text = "Ja, einen autonomen Traktor anschaffen.";
-    String question8Option2Text = "Nein, keinen autonomen Traktor anschaffen und auf traditionelle Methoden setzen. ";
-    String question9Option1Text = "Kauf hochmoderner neuer Geräte";
-    String question9Option2Text = "Gebrauchte Geräte anschaffen";
-    String question10Option1Text = "Automatisierung von Arbeitsabläufen";
-    String question10Option2Text = "Investitionen in Schulungen und Weiterbildung für Mitarbeiter ";
+    String question8Option1Text = "Ja, einen autonomen Traktor anschaffen. (" + questions8Attributes1Change[1] + "€)";
+    String question8Option2Text = "Nein, keinen autonomen Traktor anschaffen und auf traditionelle Methoden setzen. (" + questions8Attributes2Change[1] + "€)";
+    String question9Option1Text = "Kauf hochmoderner neuer Geräte (" + questions9Attributes1Change[1] + "€)";
+    String question9Option2Text = "Gebrauchte Geräte anschaffen (" + questions9Attributes2Change[1] + "€)";
+    String question10Option1Text = "Automatisierung von Arbeitsabläufen (" + questions10Attributes1Change[1] + "€)";
+    String question10Option2Text = "Investitionen in Schulungen und Weiterbildung für Mitarbeiter (" + questions10Attributes2Change[1] + "€)";
     String question11Option1Text = "Überarbeiten der Arbeitskräfte";
-    String question11Option2Text = "Zusätzliche Arbeitskräfte einstellen";
+    String question11Option2Text = "Zusätzliche Arbeitskräfte einstellen (" + questions11Attributes2Change[1] + "€)";
     String question12Option1Text = "Warnung weitestgehend ignorieren ";
-    String question12Option2Text = "Benutzung von Pestiziden massiv ausweiten ";
-    String question13Option1Text = "Ja, die Löhne erhöhen.";
+    String question12Option2Text = "Benutzung von Pestiziden massiv ausweiten (" + questions12Attributes2Change[1] + "€)";
+    String question13Option1Text = "Ja, die Löhne erhöhen. (" + questions13Attributes1Change[1] + "€)";
     String question13Option2Text = "Nein, die Löhne nicht erhöhen und die Betriebskosten niedrig halten. ";
-    String question14Option1Text = "Ja, einen großen Kredit aufnehmen und das Land erwerben. ";
+    String question14Option1Text = "Ja, einen großen Kredit aufnehmen und das Land erwerben. (" + questions14Attributes1Change[1] + "€)";
     String question14Option2Text = "Nein, keinen Kredit aufnehmen und das Land nicht erwerben.";
-    String question15Option1Text = "Installation eines neuen Bewässerungsystems";
+    String question15Option1Text = "Installation eines neuen Bewässerungsystems (" + questions15Attributes1Change[1] + "€)";
     String question15Option2Text = "Hoffnung auf falsche Berechnungen der Meterologen. In einem heißen Sommer würde das Wasser ausgehen.";
-    String question16Option1Text = "Installation eines umfassenden IoT-Systems";
-    String question16Option2Text = "Nutzung eines Basis-IoT-Systems mit weniger Sensoren";
-    String question17Option1Text = "Ja, die Entscheidung juristisch bekämpfen.";
+    String question16Option1Text = "Installation eines umfassenden IoT-Systems (" + questions16Attributes1Change[1] + "€)";
+    String question16Option2Text = "Nutzung eines Basis-IoT-Systems mit weniger Sensoren (" + questions16Attributes2Change[1] + "€)";
+    String question17Option1Text = "Ja, die Entscheidung juristisch bekämpfen. (" + questions17Attributes1Change[1] + "€)";
     String question17Option2Text = "Nein, die Entscheidung akzeptieren. ";
 
-    //(Ernte, Vermögen, Mitarbeiterzufriedenheit, Nachhaltigkeit, Ansehen, Risiko)
-    int[] questions1Attributes1Change = {0, 0, 0, 20, 0, 0};
-    int[] questions1Attributes2Change = {20, 0, 0, 0, 0, 0};
-    int[] questions2Attributes1Change = {0, 0, -20, -30, -10, +10};
-    int[] questions2Attributes2Change = {-30, -20000, +10, +30, +10, -10};
-    int[] questions3Attributes1Change = {50, -5000, 20, -30, -50, 10};
-    int[] questions3Attributes2Change = {0, 0, 10, 10, 20, -10};
-    //TODO: Vasco fragen wie sich das Geld und risiko technisch auswirkt
-    int[] questions4Attributes1Change = {0, 20, 0, -5, 10, 5};
-    int[] questions4Attributes2Change = {0, 10, 0, 5, 15, 5};
-    int[] questions5Attributes1Change = {-10, -50000, 0, 20, 15, 10};
-    int[] questions5Attributes2Change = {0, -10, -5, -10, -15, 5};
-    int[] questions6Attributes1Change = {10, -5000, 5, 10, 15, -5};
-    int[] questions6Attributes2Change = {0, -15000, -7, 0, 20, 15};
-    int[] questions7Attributes1Change = {0, -5000, +30, 20, 50, -10};
-    int[] questions7Attributes2Change = {0, 0, -40, -20, -50, +30};
-    int[] questions8Attributes1Change = {10, -100000, -5, 5, 10, -15};
-    int[] questions8Attributes2Change = {-5, -1000, +10, -5, -10, +5};
-    int[] questions9Attributes1Change = {+15, -200000, +15, -5, 10, -15};
-    int[] questions9Attributes2Change = {7, -75000, 5, 10, 5, 5};
-    int[] questions10Attributes1Change = {10, -20000, -30, 5, -5, 0};
-    int[] questions10Attributes2Change = {5, -10000, +15, +10, +10, -5};
-    int[] questions11Attributes1Change = {+20, -1000, -20, -10, -40, 20};
-    int[] questions11Attributes2Change = {30, -2000, -5, 0, +5, -10};
-    int[] questions12Attributes1Change = {0,0, +2, 4, 1, 40};
-    int[] questions12Attributes2Change = {5, -1000, -2, -10, -2, -5};
-    int[] questions13Attributes1Change = {5, -2000, +25, 0, 10, 10};
-    int[] questions13Attributes2Change = {-10, 0, -30, 0, -20, 5};
-    int[] questions14Attributes1Change = {20, -250000, 0, 0, 10, 20};
-    int[] questions14Attributes2Change = {-10, 0, -5, 0, -10, -10};
-    int[] questions15Attributes1Change = {10, -75000, 10, 30, 20, -20};
-    int[] questions15Attributes2Change = {0, 0, -20, 0, -10, +45};
-    int[] questions16Attributes1Change = {20, -400000, 15, 20, 20, -10};
-    int[] questions16Attributes2Change = {15, -20000, 10, 10, 10, -5};
-    int[] questions17Attributes1Change = {-10, -40000, -5, 0, 10, 10};
-    int[] questions17Attributes2Change = {-20, 0, -5, -10, -10, 5};
+    
 
 
     public static Player getPlayer() {
