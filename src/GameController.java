@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import javax.swing.JOptionPane;
-
 public class GameController {
 private static Player player;
     private MainFrame mainFrame;
@@ -15,28 +13,28 @@ private static Player player;
     int[][] attributes2Change;
 
     //TODO: Fragen und Optionen verbessern
-    String questionText1 = "Du weißt, dass du bald die Farm deines Onkelsübernehmen wirst. Was willst du studieren um dich optimal auf das Leben eines Farmers vorzubereiten?";
-    String questionText2 = "Die Farm ist nun dein. Doch du stehst vor schwerwiegenden Entscheidungen. Möchstest du die Farm in Richtung Bio-Landwirtschaft betreiben oder entscheidest dui dich für Massentierhaltung?";
-    String questionText3 = "Die Hauptanbau-Pflanze deiner Farm kommt als gentechnischveränderte Pflanze auf den Markt. Diese sei resestenter gegenüber Krankheiten, allerdings sind deine Kunden und Arbeitnehmer skeptisch ";
+    String questionText1 = "Dein Onkel besitzt einen schönen Bauernhof in Brandenburg. Durch sein fortgeschrittenes Alter wird es für ihn immer schwierier die Farm zu leiten. Er möchte sie dir, seinem Lieblingsneffen, gerne übergeben. Was wirst du studieren um dich optimal auf das Leben eines Farmers vorzubereiten? Energieeinsparungspotentiale waren schon immer dein Interesse, allerdings weißt du wie wichtig deinem Onkel die Obtimierung des Anbaus ist.";
+    String questionText2 = "Die Farm ist nun dein. Doch du stehst vor schwerwiegenden Entscheidungen. Möchstest du die Farm in Richtung Bio-Landwirtschaft umbauen oder entscheidest du dich dafür die Massentierhaltung die dein Onkel betrieben aht fortzuführen?";
+    String questionText3 = "Mais, wird zu 40% auf deiner Farm angebaut. Die Firma 'FarmerSeeeds' hat eine neue gentechnischveränderte Mais-Pflanze auf den Markt gebracht. Diese sei laut Hersteller resestenter gegenüber Krankheiten, allerdings sind deine Kunden und Arbeitnehmer skeptisch gegenüber gentechnik. ";
     String questionText4 = "Willst du mit einer großen Supermarktkette kollaborieren, um deine Produkte dort zu verkaufen, oder eine Direct-To-Consumer Online-Plattform aufbauen?";
     String questionText5 = "Wollen sie einen Teil ihrer Anbaufläche in eine Photovoltaik Anlage verwandeln, um ihren eigenen Energiebedarf zu decken?\n\nIn Zeiten steigender Energiepreise und wachsender Besorgnis über den Klimawandel hast du die Möglichkeit, einen Teil deiner Anbaufläche in eine Photovoltaik-Anlage umzuwandeln. Dies könnte deinen eigenen Energiebedarf decken und deine Betriebskosten langfristig senken. Allerdings würdest du dadurch wertvolle Anbaufläche verlieren und hohe initiale Investitionskosten tragen müssen. Willst du einen Teil deiner Anbaufläche in eine Photovoltaik-Anlage verwandeln, um deinen eigenen Energiebedarf zu decken und gleichzeitig einen Beitrag zur Nachhaltigkeit zu leisten, auch wenn dies mit erheblichen Umstellungen und Risiken verbunden ist?";
     String questionText6 = "Pläne für die Expansion eines großen Agragbetriebs gelangen an die Öffentlichkeit. Die Farm liegt in der unmittelbaren Umgebung dieses neuen Großbetriebes. Wie reagieren SIe auf die drohende Konkurenz?";
     String questionText7 = "Die Arbeiter beschweren sich. Es gab zu viele Arbeitsunfälle in der Vergangenheit. Wie wollen Sie darauf reagieren? ";
     String questionText8 = "Wollen Sie einen neuen autonomen Traktor anschaffen?"; // TODO: Platzhalter am Dienstag ersetzen in gespräch mit anderen
-    String questionText9 = "Deine Felder gedeihen prächtig, Sie merken es wird Zeit für neue Ausrüstung, um sie optimal zu bewirtschaften.Es wir Zeit für neue Ausrüstung um diese Felder optimal zu bewirtschaften.";
+    String questionText9 = "Es ist ein gutes Jahr für Bauern. Deine Felder gedeihen prächtig. Du vergrößert daher deine Anbauflächen. Das erfordert eue Erntemaschienen um Optimal die Felder zu bewirtschaften.";
     String questionText10 = "Ein motivierter Arbeiter hat auf einer Fortbildung von einer neuen innovativen Anbaumethode gehört. Diese würde aber eine Fortbildung der Arbeiter bedeuten. Diene Arbeitnehmer sind gespalten: Einige wollen bei den alten Methoden bleiben, während andere offen für neues sind. Wie entscheiden Sie?";
-    String questionText11 = "Die Hauptsaison deines Hauptanbaugemüses steht an. Es kann mehr geerntet werden. Welche Maßnahmen ergreifen Sie um die Ernte zu maximieren und die Qualität der Produkte zu sichern?";
-    String questionText12 = " Die Umweltbehörden warnen vor der rasanten Ausbreitung einer neuen Pflanzenkrankheit. Erste berichte kommen allerdings aus dem Süden Deutschlands. Denken Sie die Krankheit breitet sich rasant aus?";
+    String questionText11 = "Die Hauptsaison deines Hauptanbaugetreides Mais steht an. Es kann mehr geerntet werden, als du erwartet hast. Welche Maßnahmen ergreifst du um die Ernte zu maximieren und die Qualität der Produkte zu sichern?";
+    String questionText12 = " Die Umweltbehörden warnen vor der rasanten Ausbreitung einer neuen sich schnell verbreitenden Pflanzenkrankheit. Erste Berichte kommen allerdings aus dem Süden Deutschlands. Denken Sie die Krankheit breitet sich rasant aus um deine Farm überhaupt zu ereichen?";
     String questionText13 = "Angesichts einer starken Inflation stehen viele deiner Arbeiter vor erheblichen finanziellen Herausforderungen. Eine Lohnerhöhung könnte ihre Kaufkraft erhalten und die Moral verbessern, würde jedoch deine Betriebskosten erheblich erhöhen. Andererseits könnte das Verwehren einer Lohnerhöhung dazu führen, dass deine Arbeiter unzufrieden und weniger produktiv werden, was die Effizienz und das Betriebsklima beeinträchtigen könnte. Willst du die Löhne deiner Arbeiter erhöhen, um ihre finanzielle Situation zu verbessern und ihre Zufriedenheit zu sichern, auch wenn dies zu höheren Fixkosten führt, oder entscheidest du dich gegen eine Lohnerhöhung, um die Kosten niedrig zu halten und dadurch möglicherweise die Produktivität und das Ansehen deines Betriebs zu riskieren?";
     String questionText14 = "Dein Nachbar hat dir anvertraut, dass er über Jahre hinweg Schulden angehäuft hat. Er hat dich gebeten, einen Teil seines Landes abzukaufen, um seine Schulden zu tilgen. Dies könnte eine Gelegenheit für dich sein, deine Farm zu erweitern, erfordert jedoch die Aufnahme eines großen Kredits, was mit erheblichen finanziellen Verpflichtungen und Risiken verbunden ist. Willst du einen großen Kredit aufnehmen, um das Land deines Nachbarn zu erwerben und ihn in seiner Notlage zu unterstützen, oder entscheidest du dich dagegen, um die finanzielle Stabilität deiner Farm zu bewahren, selbst wenn dies dein Ansehen in der Gemeinschaft beeinträchtigen könnte? ";
-    String questionText15 = "Sommer in Deutschland. Wetterexperten warnen; es stehe wieder eien trockene Jahreszeit an. Wie handeln Sie? ";
+    String questionText15 = "Sommer in Deutschland. Wetterexperten warnen; es stehe wieder eine trockene Jahreszeit an. Wie handeln Sie? ";
     String questionText16 = " Implementierung eines IoT-Systems zur Überwachung von Umweltbedingungen \n" + //
                 "Der Farmer plant, ein Internet of Things (IoT)-System zu installieren, um Echtzeitdaten über Bodenfeuchtigkeit, Wetter und Pflanzenwachstum zu erhalten.";
     String questionText17 = "Die Regierung will eine zentrale Landstraße über ihren Acker bauen. Wollen Sie diese Entscheidung juristisch bekämpfen?\n\nIn deiner Nähe plant ein großes Industrieunternehmen eine Fabrik. Um diese Fabrik zu fördern, plant die Regierung den Bau einer Bundestraße über deinen Acker. Willst du diese Entscheidung juristisch bekämpfen?";
 
     // TODO: teure technologien vielleicht nach unten, da am Anfang viele teure Investitionen stehen
     String question1Option1Text = "Studium in die Richtung Energiesparende Technologien";
-    String question1Option2Text = "Im Bereich Optimierung des Anbausstudieren";
+    String question1Option2Text = "Im Bereich Optimierung von Anbaustrategien studieren";
     String question2Option1Text = "Dein Fleisch soll Preiswert sein. Du entscheidest dich für Massentierhaltung";
     String question2Option2Text = "Auf kosten deiner Ernte baust du Felder um um darauf deinen Tieren mehr auslauf zu geben";
     String question3Option1Text = "Komplette Saatgut austauschen und auf die neue Pflanze setzen";
