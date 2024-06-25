@@ -75,27 +75,27 @@ private static Player player;
     int[] questions1Attributes1Change = {0, 0, 0, 20, 0, 0};
     int[] questions1Attributes2Change = {20, 0, 0, 0, 0, 0};
     int[] questions2Attributes1Change = {0, 0, -15, -30, -10, +10};
-    int[] questions2Attributes2Change = {-20, -20000, +30, +50, +15, -5};
-    int[] questions3Attributes1Change = {50, -5000, 20, -30, -50, -40};
-    int[] questions3Attributes2Change = {0, 0, 10, 10, 20, 0};
+    int[] questions2Attributes2Change = {-20, -20000, +30, +50, +15, -10};
+    int[] questions3Attributes1Change = {50, -5000, 20, -30, -50, 10};
+    int[] questions3Attributes2Change = {0, 0, 10, 10, 20, -10};
     //TODO: Vasco fragen wie sich das Geld und risiko technisch auswirkt
-    int[] questions4Attributes1Change = {0, 20, 0, -5, 10, 15};
-    int[] questions4Attributes2Change = {0, 10, 0, 5, 15, 15};
+    int[] questions4Attributes1Change = {0, 20, 0, -5, 10, 5};
+    int[] questions4Attributes2Change = {0, 10, 0, 5, 15, 5};
     int[] questions5Attributes1Change = {-10, -50000, 0, 20, 15, 10};
     int[] questions5Attributes2Change = {0, -10, -5, -10, -15, 5};
     int[] questions6Attributes1Change = {10, -5000, 5, 10, 15, -5};
-    int[] questions6Attributes2Change = {0, -15000, -7, 0, 20, 20};
+    int[] questions6Attributes2Change = {0, -15000, -7, 0, 20, 15};
     int[] questions7Attributes1Change = {0, -5000, +30, 20, 50, -10};
-    int[] questions7Attributes2Change = {0, 0, -40, -20, -50, +50};
-    int[] questions8Attributes1Change = {10, -100000, -5, 5, 10, +15};
+    int[] questions7Attributes2Change = {0, 0, -40, -20, -50, +30};
+    int[] questions8Attributes1Change = {10, -100000, -5, 5, 10, -15};
     int[] questions8Attributes2Change = {-5, -1000, +10, -5, -10, +5};
-    int[] questions9Attributes1Change = {+15, -200000, +15, -5, 10, -10};
-    int[] questions9Attributes2Change = {7, -75000, 5, 10, 5, 3};
-    int[] questions10Attributes1Change = {10, -20000, -30, 5, -5, -5};
-    int[] questions10Attributes2Change = {5, -10000, +15, +10, +10, -2};
+    int[] questions9Attributes1Change = {+15, -200000, +15, -5, 10, -15};
+    int[] questions9Attributes2Change = {7, -75000, 5, 10, 5, 5};
+    int[] questions10Attributes1Change = {10, -20000, -30, 5, -5, 0};
+    int[] questions10Attributes2Change = {5, -10000, +15, +10, +10, -5};
     int[] questions11Attributes1Change = {+20, -1000, -20, -10, -40, 20};
-    int[] questions11Attributes2Change = {30, -2000, -5, 0, +5, 10};
-    int[] questions12Attributes1Change = {0,0, +2, 4, 1, 50};
+    int[] questions11Attributes2Change = {30, -2000, -5, 0, +5, -10};
+    int[] questions12Attributes1Change = {0,0, +2, 4, 1, 40};
     int[] questions12Attributes2Change = {5, -1000, -2, -10, -2, -5};
     int[] questions13Attributes1Change = {5, -2000, +25, 0, 10, 10};
     int[] questions13Attributes2Change = {-10, 0, -30, 0, -20, 5};
@@ -105,8 +105,8 @@ private static Player player;
     int[] questions15Attributes2Change = {0, 0, -20, 0, -10, +45};
     int[] questions16Attributes1Change = {20, -400000, 15, 20, 20, -10};
     int[] questions16Attributes2Change = {15, -20000, 10, 10, 10, -5};
-    int[] questions17Attributes1Change = {-10, -40000, -5, 0, 10, 20};
-    int[] questions17Attributes2Change = {-20, 0, -5, -10, -10, 100000};
+    int[] questions17Attributes1Change = {-10, -40000, -5, 0, 10, 10};
+    int[] questions17Attributes2Change = {-20, 0, -5, -10, -10, 5};
 
 
     public static Player getPlayer() {
@@ -159,7 +159,9 @@ private static Player player;
         if (scenarioNumber == 11) {
             reasonsToEndGame.add("Du hast deine Arbeitskräfte während der Hauptsaison zu stark ausgebeutet. Massenweise Kündigungen und fehlende neue Bewerber haben deine Farm in den Ruin getrieben.");
         }
-        
+        if (scenarioNumber == 13) {
+            reasonsToEndGame.add("Die Lohnerhöhung hat sich nicht ausgezahlt. Die hohen Fixkosten und die geringe Produktivität haben dich in den Ruin getrieben.");
+        }
         if (scenarioNumber == 14) {
             reasonsToEndGame.add("Du hast einen großen Kredit aufgenommen, um das Land deines Nachbarn zu erwerben. Die hohen Zinsen und die Tilgung des Kredits haben dich in den Ruin getrieben.");
         }
@@ -193,7 +195,9 @@ private static Player player;
         if (scenarioNumber == 7) {
             reasonsToEndGame.add("Öffentliche Kritik an deiner restriktiven Umsetzung der Sicherheitsregularien und häufige Arbeitsunfälle führten zur Schließung deiner Farm durch die Behörden.");
         }
-        
+        if (scenarioNumber == 8) {
+            reasonsToEndGame.add("Du hast dich gegen die Anschaffung eines autonomen Traktors entschieden. Die Konkurrenz nutzte die Technologie, um effizienter zu arbeiten und dich aus dem Markt zu drängen.");
+        }
         if (scenarioNumber == 9) {
             reasonsToEndGame.add("Die gekauften gebrauchten Geräte haben sich als Fehlinvestition herausgestellt. Hohe Reparaturkosten und geringe Effizienz haben dich in den Ruin getrieben.");
         }
