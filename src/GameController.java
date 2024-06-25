@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 public class GameController {
 private static Player player;
     private MainFrame mainFrame;
@@ -70,7 +72,7 @@ private static Player player;
 
  int[] questions1Attributes1Change = {0, 0, 0, 20, 0, 0};
     int[] questions1Attributes2Change = {20, 0, 0, 0, 0, 0};
-    int[] questions2Attributes1Change = {0, 20000, -15, -30, -10, +10};
+    int[] questions2Attributes1Change = {0, 0, -15, -30, -10, +10};
     int[] questions2Attributes2Change = {-20, -20000, +30, +50, +15, -5};
     int[] questions3Attributes1Change = {50, -5000, 20, -30, -50, -40};
     int[] questions3Attributes2Change = {0, 0, 10, 10, 20, 0};
@@ -130,12 +132,13 @@ private static Player player;
         attributes2Change = new int[][]{questions1Attributes2Change, questions2Attributes2Change, questions3Attributes2Change, questions4Attributes2Change, questions5Attributes2Change, questions6Attributes2Change, questions7Attributes2Change, questions8Attributes2Change, questions9Attributes2Change, questions10Attributes2Change, questions11Attributes2Change, questions12Attributes2Change, questions13Attributes2Change, questions14Attributes2Change, questions15Attributes2Change, questions16Attributes2Change, questions17Attributes2Change};
         mainFrame.optionPanel1.addOptionButtonListener(e -> handleOption1());
         mainFrame.optionPanel2.addOptionButtonListener(e -> handleOption2());
-        if (player.getVermoegen() < attributes1Change[scenarioNumber][1] || player.getVermoegen() < attributes2Change[scenarioNumber][1])
-            //TODO: Warnhinweis geben das Spieler weiß er könnte pleite gehen
         updateGUI();
     }
 
     private void handleOption1() {
+        if ((player.getVermoegen() + attributes1Change[scenarioNumber + 1][1]) < 0){
+            mainFrame.displayMessage("Wenn sie bei der nächsten Frage die falsche Option wählen gehen sie Bankrott", "Warnung");
+        }
         if (scenarioNumber == 3) {
             reasonsToEndGame.add("Die genmanipulierte Pflanze wurde von den Kunden nicht angenommen. Die Kosten für die Neupflanzung und das Saatgut haben dich in den Ruin getrieben.");
         }
@@ -143,7 +146,6 @@ private static Player player;
         if (scenarioNumber == 5) {
             reasonsToEndGame.add("Die Investition in die Photovoltaik-Anlage hat sich nicht ausgezahlt. Die hohen Investitionskosten und der Verlust von Anbaufläche haben dich in den Ruin getrieben.");
         }
-        
         if (scenarioNumber == 6) {
             reasonsToEndGame.add("Die Konkurrenz hat dich aus dem Markt gedrängt. Die Diversifizierung deiner Produktpalette wurde von deinen Kunden nicht angenommen.");
         }
@@ -176,10 +178,12 @@ private static Player player;
     }
 
     private void handleOption2() {
+        if ((player.getVermoegen() + attributes1Change[scenarioNumber + 1][1]) < 0){
+            mainFrame.displayMessage("Wenn sie bei der nächsten Frage die falsche Option wählen gehen sie Bankrott", "Warnung");
+        }
         if (scenarioNumber == 3) {
             reasonsToEndGame.add("Deine Konkurrenz setzte auf genmanipulierte Pflanzen mit höherer Resistenz und besseren Erträgen, was dich nach und nach aus dem Markt drängte.");
         }
-        
         if (scenarioNumber == 6) {
             reasonsToEndGame.add("Der lang anhaltende Preiskampf mit der Konkurrenz hat dich in den Ruin getrieben.");
         }
@@ -292,8 +296,6 @@ private static Player player;
     private void checkRisk() {
         int risk = player.getRisiko();
         double random = Math.random() * 100;
-        System.out.println("risk: " + risk);
-        System.out.println("random" + random);
         if (random < risk && !reasonsToEndGame.isEmpty()) {
             int randomNum = (int)(Math.random() * reasonsToEndGame.size());
             mainFrame.set_riskFlag(1);
