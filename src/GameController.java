@@ -109,8 +109,6 @@ int[] questions17Attributes2Change = {-20, 0, -5, -10, -10, 5};
     String question17Option1Text = "Ja, die Entscheidung juristisch bekämpfen. (" + questions17Attributes1Change[1] + "€)";
     String question17Option2Text = "Nein, die Entscheidung akzeptieren. ";
 
-    
-
 
     public static Player getPlayer() {
         return player;
@@ -141,10 +139,6 @@ int[] questions17Attributes2Change = {-20, 0, -5, -10, -10, 5};
     }
 
     private void handleOption1() {
-        if (((player.getVermoegen() + attributes1Change[scenarioNumber + 2][1]) < 0) || (player.getVermoegen() + attributes2Change[scenarioNumber + 2][1]) < 0){
-            mainFrame.displayMessage("Wenn sie bei der nächsten Frage die falsche Option wählen gehen sie Bankrott", "Warnung");
-        }
-
         if (scenarioNumber == 0) {
             reasonsToEndGame.add("Dein Onkel besaß unbekannte Schulden bei einer lokalen Bank. Die Schulden wurden auf dich übertragen und haben dich in den Ruin getrieben.");
         }
@@ -190,9 +184,6 @@ int[] questions17Attributes2Change = {-20, 0, -5, -10, -10, 5};
     }
 
     private void handleOption2() {
-        if (((player.getVermoegen() + attributes1Change[scenarioNumber + 2][1]) < 0) || (player.getVermoegen() + attributes2Change[scenarioNumber + 2][1]) < 0){
-            mainFrame.displayMessage("Wenn sie bei der nächsten Frage die falsche Option wählen gehen sie Bankrott", "Warnung");
-        }
         if (scenarioNumber == 3) {
             reasonsToEndGame.add("Deine Konkurrenz setzte auf genmanipulierte Pflanzen mit höherer Resistenz und besseren Erträgen, was dich nach und nach aus dem Markt drängte.");
         }

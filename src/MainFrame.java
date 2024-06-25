@@ -48,7 +48,6 @@ public class MainFrame extends JFrame {
         String explanation;
         ImageIcon image;
         Player player = GameController.getPlayer();
-        // TODO: Bilder durch richtige Bilder ersetzen
         if (get_riskFlag() == 1) { 
             caption = "Dein Hof ging zu hohe Risiken ein";
             explanation = reason;
@@ -94,9 +93,5 @@ public class MainFrame extends JFrame {
         // Refresh the frame
         revalidate();
         repaint();
-    }
-
-    public void displayMessage(String message, String title) {
-        JOptionPane.showMessageDialog(this, message, title, JOptionPane.ERROR_MESSAGE);
     }
 }
