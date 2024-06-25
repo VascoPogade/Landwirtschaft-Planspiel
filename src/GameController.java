@@ -14,6 +14,7 @@ private static Player player;
     int[][] attributes1Change;
     int[][] attributes2Change;
 
+    //TODO: Fragen und Optionen verbessern
     String questionText1 = "Du weißt, dass du bald die Farm deines Onkelsübernehmen wirst. Was willst du studieren um dich optimal auf das Leben eines Farmers vorzubereiten?";
     String questionText2 = "Die Farm ist nun dein. Doch du stehst vor schwerwiegenden Entscheidungen. Möchstest du die Farm in Richtung Bio-Landwirtschaft betreiben oder entscheidest dui dich für Massentierhaltung?";
     String questionText3 = "Die Hauptanbau-Pflanze deiner Farm kommt als gentechnischveränderte Pflanze auf den Markt. Diese sei resestenter gegenüber Krankheiten, allerdings sind deine Kunden und Arbeitnehmer skeptisch ";
