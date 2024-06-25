@@ -4,7 +4,7 @@ public class GameController {
 private static Player player;
     private MainFrame mainFrame;
     private ArrayList<String> reasonsToEndGame;
-    int scenarioNumber;
+    static int scenarioNumber;
 
     String[] questions;
     String[] options1;
@@ -31,7 +31,7 @@ private static Player player;
                 "Der Farmer plant, ein Internet of Things (IoT)-System zu installieren, um Echtzeitdaten über Bodenfeuchtigkeit, Wetter und Pflanzenwachstum zu erhalten.";
     String questionText17 = "Die Regierung will eine zentrale Landstraße über ihren Acker bauen. Wollen Sie diese Entscheidung juristisch bekämpfen?\n\nIn deiner Nähe plant ein großes Industrieunternehmen eine Fabrik. Um diese Fabrik zu fördern, plant die Regierung den Bau einer Bundestraße über deinen Acker. Willst du diese Entscheidung juristisch bekämpfen?";
 
-    // TODO: change attributes for boost
+    // TODO: teure technologien vielleicht nach unten, da am Anfang viele teure Investitionen stehen
     String question1Option1Text = "Studium in die Richtung Energiesparende Technologien";
     String question1Option2Text = "Im Bereich Optimierung des Anbausstudieren";
     String question2Option1Text = "Dein Fleisch soll Preiswert sein. Du entscheidest dich für Massentierhaltung";
@@ -74,38 +74,43 @@ private static Player player;
     int[] questions2Attributes2Change = {-20, -20000, +30, +50, +15, -5};
     int[] questions3Attributes1Change = {50, -5000, 20, -30, -50, -40};
     int[] questions3Attributes2Change = {0, 0, 10, 10, 20, 0};
-    int[] questions4Attributes1Change = {0, 20, 0, -5, 10, 10000};
+    //TODO: Vasco fragen
+    int[] questions4Attributes1Change = {0, 20, 0, -5, 10, 15};
     int[] questions4Attributes2Change = {0, 10, 0, 5, 15, 15};
-    int[] questions5Attributes1Change = {-10, -20, 0, 20, 15, 10};
+    int[] questions5Attributes1Change = {-10, -50000, 0, 20, 15, 10};
     int[] questions5Attributes2Change = {0, -10, -5, -10, -15, 5};
-    int[] questions6Attributes1Change = {10, -5, 5, 10, 15, -5};
-    int[] questions6Attributes2Change = {0, -15, -7, 0, 20, 20};
-    int[] questions7Attributes1Change = {0, -20, +30, 20, 50, -10};
+    int[] questions6Attributes1Change = {10, -5000, 5, 10, 15, -5};
+    int[] questions6Attributes2Change = {0, -15000, -7, 0, 20, 20};
+    int[] questions7Attributes1Change = {0, -5000, +30, 20, 50, -10};
     int[] questions7Attributes2Change = {0, 0, -40, -20, -50, +50};
-    int[] questions8Attributes1Change = {10, -25, -5, 5, 10, +15};
-    int[] questions8Attributes2Change = {-5, -10, +10, -5, -10, +5};
-    int[] questions9Attributes1Change = {+15, -20, +15, -5, 10, -10};
-    int[] questions9Attributes2Change = {7, -10, 5, 10, 5, 3};
-    int[] questions10Attributes1Change = {10, 15, -30, 5, -5, -5};
-    int[] questions10Attributes2Change = {5, 5, +15, +10, +10, -2};
-    int[] questions11Attributes1Change = {+20, -10, -20, -10, -40, 20};
-    int[] questions11Attributes2Change = {30, -20, -5, 0, +5, 10};
+    int[] questions8Attributes1Change = {10, -100000, -5, 5, 10, +15};
+    int[] questions8Attributes2Change = {-5, -1000, +10, -5, -10, +5};
+    int[] questions9Attributes1Change = {+15, -200000, +15, -5, 10, -10};
+    int[] questions9Attributes2Change = {7, -75000, 5, 10, 5, 3};
+    int[] questions10Attributes1Change = {10, -20000, -30, 5, -5, -5};
+    int[] questions10Attributes2Change = {5, -10000, +15, +10, +10, -2};
+    int[] questions11Attributes1Change = {+20, -1000, -20, -10, -40, 20};
+    int[] questions11Attributes2Change = {30, -2000, -5, 0, +5, 10};
     int[] questions12Attributes1Change = {0,0, +2, 4, 1, 50};
-    int[] questions12Attributes2Change = {5, -20, -2, -10, -2, -5};
-    int[] questions13Attributes1Change = {5, -20, +25, 0, 10, 10};
-    int[] questions13Attributes2Change = {-10, +10, -30, 0, -20, 5};
-    int[] questions14Attributes1Change = {20, -30, 0, 0, 10, 20};
-    int[] questions14Attributes2Change = {-10, 10, -5, 0, -10, -10};
-    int[] questions15Attributes1Change = {10, -60, 10, 30, 20, -20};
+    int[] questions12Attributes2Change = {5, -1000, -2, -10, -2, -5};
+    int[] questions13Attributes1Change = {5, -2000, +25, 0, 10, 10};
+    int[] questions13Attributes2Change = {-10, 0, -30, 0, -20, 5};
+    int[] questions14Attributes1Change = {20, -250000, 0, 0, 10, 20};
+    int[] questions14Attributes2Change = {-10, 0, -5, 0, -10, -10};
+    int[] questions15Attributes1Change = {10, -75000, 10, 30, 20, -20};
     int[] questions15Attributes2Change = {0, 0, -20, 0, -10, +45};
-    int[] questions16Attributes1Change = {20, -40, 15, 20, 20, -10};
-    int[] questions16Attributes2Change = {15, -20, 10, 10, 10, -5};
-    int[] questions17Attributes1Change = {-10, -15, -5, 0, 10, 20};
-    int[] questions17Attributes2Change = {-20, 10, -5, -10, -10, 0};
+    int[] questions16Attributes1Change = {20, -400000, 15, 20, 20, -10};
+    int[] questions16Attributes2Change = {15, -20000, 10, 10, 10, -5};
+    int[] questions17Attributes1Change = {-10, -40000, -5, 0, 10, 20};
+    int[] questions17Attributes2Change = {-20, 0, -5, -10, -10, 100000};
 
 
     public static Player getPlayer() {
         return player;
+    }
+
+    public static int getScenarioNumber() {
+        return scenarioNumber;
     }
 
 
@@ -116,6 +121,7 @@ private static Player player;
         mainFrame.scenarioPanel.setScenarioText(questionText1);
         mainFrame.optionPanel1.setOptionText(question1Option1Text);
         mainFrame.optionPanel2.setOptionText(question1Option2Text);
+        reasonsToEndGame = new ArrayList<>();
 
         questions = new String[]{questionText1, questionText2, questionText3, questionText4, questionText5, questionText6, questionText7, questionText8, questionText9, questionText10, questionText11, questionText12, questionText13, questionText14, questionText15, questionText16, questionText17};
         options1 = new String[]{question1Option1Text, question2Option1Text, question3Option1Text, question4Option1Text, question5Option1Text, question6Option1Text, question7Option1Text, question8Option1Text, question9Option1Text, question10Option1Text, question11Option1Text, question12Option1Text, question13Option1Text, question14Option1Text, question15Option1Text, question16Option1Text, question17Option1Text};
@@ -124,19 +130,38 @@ private static Player player;
         attributes2Change = new int[][]{questions1Attributes2Change, questions2Attributes2Change, questions3Attributes2Change, questions4Attributes2Change, questions5Attributes2Change, questions6Attributes2Change, questions7Attributes2Change, questions8Attributes2Change, questions9Attributes2Change, questions10Attributes2Change, questions11Attributes2Change, questions12Attributes2Change, questions13Attributes2Change, questions14Attributes2Change, questions15Attributes2Change, questions16Attributes2Change, questions17Attributes2Change};
         mainFrame.optionPanel1.addOptionButtonListener(e -> handleOption1());
         mainFrame.optionPanel2.addOptionButtonListener(e -> handleOption2());
-
+        if (player.getVermoegen() < attributes1Change[scenarioNumber][1] || player.getVermoegen() < attributes2Change[scenarioNumber][1])
+            //TODO: Warnhinweis geben das Spieler weiß er könnte pleite gehen
         updateGUI();
     }
 
     private void handleOption1() {
+        //TODO: schöner umschreiben
         if (scenarioNumber == 3) {
-            addReasonsToEndGame("Die Genmanipulierte Pflanze wurde von den Kunden nicht angenommen. Die Kosten für die Neupflanzung und für das Saatgut haben dich in den Ruin getrieben.");
+            reasonsToEndGame.add("Die Genmanipulierte Pflanze wurde von den Kunden nicht angenommen. Die Kosten für die Neupflanzung und für das Saatgut haben dich in den Ruin getrieben.");
         }
         if (scenarioNumber == 5) {
-            addReasonsToEndGame("Die Investition in die Photovoltaik-Anlage hat sich nicht ausgezahlt. Die hohen Investitionskosten und der Verlust von Anbaufläche haben dich in den Ruin getrieben.");
+            reasonsToEndGame.add("Die Investition in die Photovoltaik-Anlage hat sich nicht ausgezahlt. Die hohen Investitionskosten und der Verlust von Anbaufläche haben dich in den Ruin getrieben.");
         }
-        
-        
+        if (scenarioNumber == 6) {
+            reasonsToEndGame.add("Die Konkurrenz hat dich aus dem Markt gedrängt. Die Diversifizierung deiner Produktpalette haben deine Kunden nicht angenommen. ");
+        }
+        //TODO: Platzhalter ersetzen
+        if (scenarioNumber == 8) {
+            reasonsToEndGame.add("Die Investiotion in neue Technologie hat sich gelohnt. Die Anschaffung allerdings extrem kostenspielieg. Leider Ist der neue Traktor kaputt und du und deine Farm im Ruin");
+        }
+        if (scenarioNumber == 11) {
+            reasonsToEndGame.add("Du hast deine Arbeitskräfte während der Hauptsaison zu stark ausgebeutet. Reihenweise Kündigungen und keine neuen Bewerber auf die Stellen trieben deine Farm in den Ruin.");
+        }
+        if (scenarioNumber == 14) {
+            reasonsToEndGame.add("Du hast einen großen Kredit aufgenommen, um das Land deines Nachbarn zu erwerben. Die hohen Zinsen und die Tilgung des Kredits haben dich in den Ruin getrieben.");
+        }
+        if (scenarioNumber == 15) {
+            reasonsToEndGame.add("Die Investition in ein neues Bewässerungssystem hat sich nicht ausgezahlt. Die hohen Investitionskosten und die falschen Berechnungen der Meteorologen haben dich in den Ruin getrieben.");
+        }
+        if (scenarioNumber == 16) {
+            reasonsToEndGame.add("Die Investition in ein umfassendes IoT-System hat sich nicht ausgezahlt. Die hohen Investitionskosten und die fehlende Akzeptanz der Technologie haben dich in den Ruin getrieben.");
+        }
         
         checkRisk();
         changeAttributesOne();
@@ -145,6 +170,32 @@ private static Player player;
     }
 
     private void handleOption2() {
+        if (scenarioNumber == 3) {
+            reasonsToEndGame.add("Deine Konkurenz setzte auf die Genmanipulierte Pflanze. Durch höhere resistenz und bessere Ertäge wurdest du nach und nach aus dem Markt gedrängt");
+        }
+        if (scenarioNumber == 6) {
+            reasonsToEndGame.add("Der lang anhaltende Preiskrampf mit der Konkurenz hat dich in den Ruin getrieben.");
+        }
+        if (scenarioNumber == 7) {
+            reasonsToEndGame.add("Öffentliche Kritik an deiner restriktiven Umsetzung der Sicherheitsregularien und sich häufende Arbeitsauffälle haben dazu geführt das deine Farm von den Behörden geshlossen wurde.");
+        }
+        if (scenarioNumber ==  9){
+            reasonsToEndGame.add("Die gekauften gebrauchten Geräte haben sich als Fehlinvestition herausgestellt. Die hohen Reparaturkosten und die geringe Effizienz haben dich in den Ruin getrieben.");
+        }
+        if (scenarioNumber ==  12){
+            reasonsToEndGame.add("Der großflächige massive Einsatz von Pestiziden haben deinen Feldern nachhaltig geschadet. Nichts wächst mehr und du bist ruiniert.");
+        }
+        if (scenarioNumber ==  15){
+            reasonsToEndGame.add("Die Meteorologen hatten recht. Es wurde ein heißer Sommer und das Wasser ging aus. Deine Felder sind vertrocknet und du bist ruiniert.");
+        }
+        if (scenarioNumber ==  16){
+            reasonsToEndGame.add("Durch die Nutzung eines Basis-IOT hat sich deine Knkrurenz einen Vorteil verschafft, denn sie nutze Hochmoderne geräte. Du bist ruiniert.");
+        }
+        if (scenarioNumber ==  17){
+            reasonsToEndGame.add("Über die neue Bundesstraße werden Schadstoffe auf deine Felder getragen. kaum noch etwas wächst und du bist ruiniert.");
+        }
+
+
         checkRisk();
         changeAttributesTwo();
         nextScenario();
@@ -164,10 +215,10 @@ private static Player player;
     private void nextScenario() {
         // TODO: Endscreens einbauen falls wert gedropt ist
         if (player.getNachhaltigkeit() <= 0 || player.getErnte() <= 0 || player.getVermoegen() <= 0 || player.getMitarbeiterzufriedenheit() <= 0 || player.getAnsehen() <= 0) {
-            endGame();
+            endGame("Platzhalter");
         }
         if (scenarioNumber >= (questions.length - 1)) {
-            endGame();
+            endGame("platzhalter");
         }
 
         mainFrame.scenarioPanel.setScenarioText(questions[scenarioNumber+1]);
@@ -181,20 +232,20 @@ private static Player player;
 
     private void payout() {
         // logic to calculate the cash that the player gets this round
-        int payout = player.getErnte() * 1000; // max 100000€ per Ernte
-        payout += (player.getMitarbeiterzufriedenheit() - 50) * 50; // max +/- 2500€ per Ernte
-        payout += (player.getNachhaltigkeit() - 50) * 250; // max +/- 12500€ per Ernte
-        payout += (player.getAnsehen() - 50) * 50; // max +/- 2500€ per Ernte
+        int payout = player.getErnte() * 100; // max 100000€ per Ernte
+        // payout += (player.getMitarbeiterzufriedenheit() - 50) * 50; // max +/- 2500€ per Ernte
+        // payout += (player.getNachhaltigkeit() - 50) * 250; // max +/- 12500€ per Ernte
+        // payout += (player.getAnsehen() - 50) * 50; // max +/- 2500€ per Ernte
 
-        if(player.getMitarbeiterzufriedenheit() < 15){
+        if(player.getMitarbeiterzufriedenheit() < 50){
             payout -= 30000;
         }
 
-        if(player.getNachhaltigkeit() < 15){
+        if(player.getNachhaltigkeit() < 50){
             payout -= 30000;
         }
 
-        if(player.getAnsehen() < 15){
+        if(player.getAnsehen() < 50){
             payout -= 30000;
         }
 
@@ -202,9 +253,9 @@ private static Player player;
         // payout between +82500€ and +117500€ (including penalties between -7500€ and +117500€)
     }
 
-    private void endGame() {
+    private void endGame(String string) {
         // logic to end the game
-        mainFrame.showEndScreen();
+        mainFrame.showEndScreen(string);
     }
 
     private void changeAttributesOne() {
@@ -228,14 +279,13 @@ private static Player player;
     private void checkRisk() {
         int risk = player.getRisiko();
         double random = Math.random() * 100;
-        reasonsToEndGame = new ArrayList<>();
-        int randomNum = (int)Math.random() * reasonsToEndGame.size();
         System.out.println("risk: " + risk);
-        System.out.println("random" + random);;
-        if (random < risk) {
+        System.out.println("random" + random);
+        if (random < risk && !reasonsToEndGame.isEmpty()) {
+            int randomNum = (int)(Math.random() * reasonsToEndGame.size());
             mainFrame.set_riskFlag(1);
             System.out.println("das Flag" + mainFrame.get_riskFlag());
-            endGame();
+            endGame(reasonsToEndGame.get(randomNum - 1));
     }
     }
 

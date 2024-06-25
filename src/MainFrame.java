@@ -43,16 +43,18 @@ public class MainFrame extends JFrame {
         this.riskFlag = riskFlag;
     }
 
-    public void showEndScreen() {
+    public void showEndScreen(String reason) {
         String  caption;
         String explanation;
         ImageIcon image;
+        int scenarioNumber = GameController.getScenarioNumber();
         Player player = GameController.getPlayer();
         // TODO: Bilder durch richtige Bilder ersetzen
         if (get_riskFlag() == 1) { 
-            // TODO: aus der risikoMethode den richtigen Grund aus Array ziehen
+            System.out.println("das riskFlag ist: " + get_riskFlag());
             caption = "Deine Farm ging zu hohes Risiko ein";
-            explanation = "Vlavla";
+            explanation = reason;
+            System.out.println("das reason ist: " + reason);
             image = new ImageIcon("src/resources/beispiel.png");
         }
     else {
