@@ -68,7 +68,8 @@ private static Player player;
     String question17Option1Text = "Ja, die Entscheidung juristisch bekämpfen.";
     String question17Option2Text = "Nein, die Entscheidung akzeptieren. ";
 
- int[] questions1Attributes1Change = {0, 0, 0, 20, 0, 0};
+    //(Ernte, Vermögen, Mitarbeiterzufriedenheit, Nachhaltigkeit, Ansehen, Risiko)
+    int[] questions1Attributes1Change = {0, 0, 0, 20, 0, 0};
     int[] questions1Attributes2Change = {20, 0, 0, 0, 0, 0};
     int[] questions2Attributes1Change = {0, 20000, -15, -30, -10, +10};
     int[] questions2Attributes2Change = {-20, -20000, +30, +50, +15, -5};

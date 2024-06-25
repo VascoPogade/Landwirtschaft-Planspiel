@@ -51,36 +51,36 @@ public class MainFrame extends JFrame {
         Player player = GameController.getPlayer();
         // TODO: Bilder durch richtige Bilder ersetzen
         if (get_riskFlag() == 1) { 
-            caption = "Deine Farm ging zu hohes Risiko ein";
+            caption = "Dein Hof ging zu hohe Risiken ein";
             explanation = reason;
             System.out.println("Der Grund ist: " + reason);
-            image = new ImageIcon("src/resources/beispiel.png");
+            image = new ImageIcon("src/resources/Picture_of_Famer_2.png");
         } else {
             if (player.getVermoegen() <= 0) {
                 caption = "Bankrott";
                 explanation = "Schulden über Schulden. Die Farm gehört nun der Bank.";
-                image = new ImageIcon("src/resources/beispiel.png");
+                image = new ImageIcon("src/resources/Picture_of_Famer_2.png");
             } else if (player.getNachhaltigkeit() < 0) {
                 caption = "Ökologisches Desaster";
                 explanation = "Deine Farm verschmutzt die Umwelt. Landesweite Proteste zwingen dich, die Farm zu schließen.";
-                image = new ImageIcon("src/resources/beispiel.png");
+                image = new ImageIcon("src/resources/End_Sustainability.png");
             } else if (player.getAnsehen() <= 0) {
                 caption = "Widerstand der Gemeinschaft";
                 explanation = "Die Gemeinschaft lehnt deine Anbaumethoden ab. Deine Farm verliert an Ansehen und Marktanteil.";
-                image = new ImageIcon("src/resources/beispiel.png");
+                image = new ImageIcon("src/resources/End_Ansehen_2.png");
             } else if (player.getErnte() <= 0) {  
                 caption = "Missernte";
                 explanation = "Die Ernte ist zu gering ausgefallen. Du kannst deine Verpflichtungen nicht erfüllen und musst die Farm schließen.";
-                image = new ImageIcon("src/resources/poor_harvest_image.png");
-            } else if (player.getMitarbeiterzufriedenheit() <= 0) {  // Assuming 'Mitarbeiterzufriedenheit' represents employee satisfaction
+                image = new ImageIcon("src/resources/Missernte.png");
+            } else if (player.getMitarbeiterzufriedenheit() <= 0) {
                 caption = "Mitarbeiteraufstand";
                 explanation = "Deine Mitarbeiter sind nicht zufrieden wie du deine Farm leitest. Die Arbeiter streiken, und die Farm kann nicht weiter betrieben werden.";
-                image = new ImageIcon("src/resources/beispiel.png");
+                image = new ImageIcon("src/resources/End_Mitarbeiterzufriedenheit_2.png");
             } else {
                 // Gewinner Screen
                 caption = "Spiel vorbei";
-                explanation = "Spiel vorbei aus unbekannten Gründen.";
-                image = new ImageIcon("src/resources/default_image.png");
+                explanation = "Sie haben das Ende des Spiels erreicht.";
+                image = new ImageIcon("src/resources/Successful.png");
             } 
     }
 
