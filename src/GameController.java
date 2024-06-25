@@ -138,7 +138,7 @@ private static Player player;
     }
 
     private void handleOption1() {
-        if ((player.getVermoegen() + attributes1Change[scenarioNumber + 1][1]) < 0){
+        if (((player.getVermoegen() + attributes1Change[scenarioNumber + 1][1]) < 0) || (player.getVermoegen() + attributes2Change[scenarioNumber + 1][1]) < 0){
             mainFrame.displayMessage("Wenn sie bei der nächsten Frage die falsche Option wählen gehen sie Bankrott", "Warnung");
         }
         if (scenarioNumber == 3) {
@@ -182,7 +182,7 @@ private static Player player;
     }
 
     private void handleOption2() {
-        if ((player.getVermoegen() + attributes1Change[scenarioNumber + 1][1]) < 0){
+        if (((player.getVermoegen() + attributes1Change[scenarioNumber + 1][1]) < 0) || (player.getVermoegen() + attributes2Change[scenarioNumber + 1][1]) < 0){
             mainFrame.displayMessage("Wenn sie bei der nächsten Frage die falsche Option wählen gehen sie Bankrott", "Warnung");
         }
         if (scenarioNumber == 3) {
