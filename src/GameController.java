@@ -14,14 +14,14 @@ private static Player player;
 
     //TODO: Fragen und Optionen verbessern
     String questionText1 = "Dein Onkel besitzt einen schönen Bauernhof in Brandenburg. Durch sein fortgeschrittenes Alter wird es für ihn immer schwierier die Farm zu leiten. Er möchte sie dir, seinem Lieblingsneffen, gerne übergeben. Was wirst du studieren um dich optimal auf das Leben eines Farmers vorzubereiten? Energieeinsparungspotentiale waren schon immer dein Interesse, allerdings weißt du wie wichtig deinem Onkel die Obtimierung des Anbaus ist.";
-    String questionText2 = "Die Farm ist nun dein. Doch du stehst vor schwerwiegenden Entscheidungen. Möchstest du die Farm in Richtung Bio-Landwirtschaft umbauen oder entscheidest du dich dafür die Massentierhaltung die dein Onkel betrieben aht fortzuführen?";
-    String questionText3 = "Mais, wird zu 40% auf deiner Farm angebaut. Die Firma 'FarmerSeeeds' hat eine neue gentechnischveränderte Mais-Pflanze auf den Markt gebracht. Diese sei laut Hersteller resestenter gegenüber Krankheiten, allerdings sind deine Kunden und Arbeitnehmer skeptisch gegenüber gentechnik. ";
+    String questionText2 = "Die Farm ist nun dein. Doch du stehst vor schwerwiegenden Entscheidungen. Möchtest du die Farm in Richtung Bio-Landwirtschaft umbauen, nimmt die strengen Regularien dafür in Kauf? Oder entscheidest du dich dafür, die Massentierhaltung, die dein Onkel betrieben hat, fortzuführen?";
+    String questionText3 = "Mais, wird zu 40% auf deiner Farm angebaut. Die Firma 'FarmerSeeeds' hat eine neue gentechnischveränderte Mais-Pflanze auf den Markt gebracht. Diese sei laut Hersteller resestenter gegenüber Krankheiten und bietet mehr Ertäge pro Pflanze, allerdings sind deine Kunden und Arbeitnehmer skeptisch gegenüber gentechnik.";
     String questionText4 = "Willst du mit einer großen Supermarktkette kollaborieren, um deine Produkte dort zu verkaufen, oder eine Direct-To-Consumer Online-Plattform aufbauen?";
     String questionText5 = "Wollen sie einen Teil ihrer Anbaufläche in eine Photovoltaik Anlage verwandeln, um ihren eigenen Energiebedarf zu decken?\n\nIn Zeiten steigender Energiepreise und wachsender Besorgnis über den Klimawandel hast du die Möglichkeit, einen Teil deiner Anbaufläche in eine Photovoltaik-Anlage umzuwandeln. Dies könnte deinen eigenen Energiebedarf decken und deine Betriebskosten langfristig senken. Allerdings würdest du dadurch wertvolle Anbaufläche verlieren und hohe initiale Investitionskosten tragen müssen. Willst du einen Teil deiner Anbaufläche in eine Photovoltaik-Anlage verwandeln, um deinen eigenen Energiebedarf zu decken und gleichzeitig einen Beitrag zur Nachhaltigkeit zu leisten, auch wenn dies mit erheblichen Umstellungen und Risiken verbunden ist?";
-    String questionText6 = "Pläne für die Expansion eines großen Agragbetriebs gelangen an die Öffentlichkeit. Die Farm liegt in der unmittelbaren Umgebung dieses neuen Großbetriebes. Wie reagieren SIe auf die drohende Konkurenz?";
-    String questionText7 = "Die Arbeiter beschweren sich. Es gab zu viele Arbeitsunfälle in der Vergangenheit. Wie wollen Sie darauf reagieren? ";
-    String questionText8 = "Wollen Sie einen neuen autonomen Traktor anschaffen?"; // TODO: Platzhalter am Dienstag ersetzen in gespräch mit anderen
-    String questionText9 = "Es ist ein gutes Jahr für Bauern. Deine Felder gedeihen prächtig. Du vergrößert daher deine Anbauflächen. Das erfordert eue Erntemaschienen um Optimal die Felder zu bewirtschaften.";
+    String questionText6 = "Vor kurzem sind Pläne für die Expansion eines großen Agrarbetriebs in Ihrer Region an die Öffentlichkeit gelangt. Dieser neue Großbetrieb wird in unmittelbarer Nähe Ihrer eigenen Farm errichtet und stellt eine erhebliche Konkurrenz dar. Es wird erwartet, dass der neue Betrieb modernste Technologien und umfangreiche Ressourcen einsetzen wird, um seine Effizienz und Produktivität zu maximieren. Angesichts dieser Entwicklung könnten sich die Marktbedingungen stark verändern, was erhebliche Auswirkungen auf Ihren Betrieb haben könnte. Wie reagieren SIe auf die drohende Konkurenz?";
+    String questionText7 = "In letzter Zeit gab es zahlreiche Beschwerden von Ihren Arbeitern über eine beunruhigende Anzahl von Arbeitsunfällen in Ihrem Betrieb. Die Mitarbeiter sind besorgt um ihre Sicherheit und Gesundheit am Arbeitsplatz und fordern dringende Maßnahmen zur Verbesserung der Arbeitsbedingungen. Diese Situation stellt nicht nur ein erhebliches Risiko für das Wohlbefinden Ihrer Mitarbeiter dar, sondern kann auch rechtliche und wirtschaftliche Konsequenzen für Ihr Unternehmen haben. Allerdings ist dies mit Kosten verbunden, die du eigentlich nicht zahlen willst.";
+    String questionText8 = "Du bist immer bereit deine Farm besser zu organisieren. Du hast von einem befreundeten Bauern gehört, dass es Farm-Management-Informationssystem gibt um effizienter zu landwirtschaften. Allerdings würde sich dein Geldbeutel ehrheblich leeren und vorher hat es auch ohne funktioniert. Wie entscheidest du?"; 
+    String questionText9 = "Es ist ein besonders gutes Jahr für die Landwirtschaft, und deine Felder gedeihen prächtig. Um von diesen idealen Bedingungen zu profitieren, entscheidest du dich, deine Anbauflächen zu vergrößern. Dies erfordert jedoch die Anschaffung neuer Erntemaschinen, um die Felder optimal bewirtschaften zu können. Wie planst du den Kauf dieser neuen Maschinen?";
     String questionText10 = "Ein motivierter Arbeiter hat auf einer Fortbildung von einer neuen innovativen Anbaumethode gehört. Diese würde aber eine Fortbildung der Arbeiter bedeuten. Diene Arbeitnehmer sind gespalten: Einige wollen bei den alten Methoden bleiben, während andere offen für neues sind. Wie entscheiden Sie?";
     String questionText11 = "Die Hauptsaison deines Hauptanbaugetreides Mais steht an. Es kann mehr geerntet werden, als du erwartet hast. Welche Maßnahmen ergreifst du um die Ernte zu maximieren und die Qualität der Produkte zu sichern?";
     String questionText12 = " Die Umweltbehörden warnen vor der rasanten Ausbreitung einer neuen sich schnell verbreitenden Pflanzenkrankheit. Erste Berichte kommen allerdings aus dem Süden Deutschlands. Denken Sie die Krankheit breitet sich rasant aus um deine Farm überhaupt zu ereichen?";
@@ -48,8 +48,8 @@ int[] questions6Attributes1Change = {10, -50000, 5, 10, 15, -5};
 int[] questions6Attributes2Change = {0, -150000, -7, 0, 20, 15};
 int[] questions7Attributes1Change = {0, -50000, +30, 20, 50, -10};
 int[] questions7Attributes2Change = {0, 0, -40, -20, -50, +30};
-int[] questions8Attributes1Change = {10, -1000000, -5, 5, 10, -15};
-int[] questions8Attributes2Change = {-5, -10000, +10, -5, -10, +5};
+int[] questions8Attributes1Change = {10, -1000000, 10, 5, 10, 0};
+int[] questions8Attributes2Change = {0, 0, -10, 0, -10, +10};
 int[] questions9Attributes1Change = {+15, -2000000, +15, -5, 10, -15};
 int[] questions9Attributes2Change = {7, -750000, 5, 10, 5, 5};
 int[] questions10Attributes1Change = {10, -200000, -30, 5, -5, 0};
@@ -88,8 +88,8 @@ int[] questions17Attributes2Change = {-20, 0, -5, -10, -10, 5};
     String question7Option1Text = "Strikte Umsetzung und Verbesserung der Regularien (" + questions7Attributes1Change[1] + "€)";
     String question7Option2Text = "Minimale Umsetzung der Regularien beibehalten";
     //Platzhalter Traktor
-    String question8Option1Text = "Ja, einen autonomen Traktor anschaffen. (" + questions8Attributes1Change[1] + "€)";
-    String question8Option2Text = "Nein, keinen autonomen Traktor anschaffen und auf traditionelle Methoden setzen. (" + questions8Attributes2Change[1] + "€)";
+    String question8Option1Text = "Ja, Farm-Management-Informationssystem anschaffen (" + questions8Attributes1Change[1] + "€)";
+    String question8Option2Text = "Nein, kein Farm-Management-Informationssystem anschaffen (" + questions8Attributes2Change[1] + "€)";
     String question9Option1Text = "Kauf hochmoderner neuer Geräte (" + questions9Attributes1Change[1] + "€)";
     String question9Option2Text = "Gebrauchte Geräte anschaffen (" + questions9Attributes2Change[1] + "€)";
     String question10Option1Text = "Automatisierung von Arbeitsabläufen (" + questions10Attributes1Change[1] + "€)";
@@ -155,7 +155,7 @@ int[] questions17Attributes2Change = {-20, 0, -5, -10, -10, 5};
         }
         //TODO: Platzhalter technologie ersetzen
         if (scenarioNumber == 8) {
-            reasonsToEndGame.add("Die Investition in neue Technologie hat sich gelohnt, jedoch war die Anschaffung extrem kostspielig. Der neue Traktor ist leider kaputtgegangen und hat dich sowie deine Farm in den Ruin getrieben.");
+            reasonsToEndGame.add("Die Investition in neue Technologie hat sich nicht gelohnt. Da die Anschaffung extrem kostspielig war bist du ruiniert. Das neue Farmmangement ist leider an der implementierung gescheitert. Der Import der schnittstellen hat sich als langwierigeren Prozess herausgestellt als erwatet.");
         }
         
         if (scenarioNumber == 11) {
@@ -195,7 +195,7 @@ int[] questions17Attributes2Change = {-20, 0, -5, -10, -10, 5};
             reasonsToEndGame.add("Öffentliche Kritik an deiner restriktiven Umsetzung der Sicherheitsregularien und häufige Arbeitsunfälle führten zur Schließung deiner Farm durch die Behörden.");
         }
         if (scenarioNumber == 8) {
-            reasonsToEndGame.add("Du hast dich gegen die Anschaffung eines autonomen Traktors entschieden. Die Konkurrenz nutzte die Technologie, um effizienter zu arbeiten und dich aus dem Markt zu drängen.");
+            reasonsToEndGame.add("Du hast dich gegen die Anschaffung eines Farm-Management-Informationssystem entschieden. Die Konkurrenz nutzte die Technologie, um effizienter zu arbeiten und dich aus dem Markt zu drängen.");
         }
         if (scenarioNumber == 9) {
             reasonsToEndGame.add("Die gekauften gebrauchten Geräte haben sich als Fehlinvestition herausgestellt. Hohe Reparaturkosten und geringe Effizienz haben dich in den Ruin getrieben.");

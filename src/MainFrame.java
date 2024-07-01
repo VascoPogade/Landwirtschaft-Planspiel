@@ -47,6 +47,9 @@ public class MainFrame extends JFrame {
         String  caption;
         String explanation;
         ImageIcon image;
+        if (reason == "Platzhalter") {
+            reason = "Dein Onkel hatte ungeahnte Schulden. Du konntest die Farm nicht retten";
+        }
         Player player = GameController.getPlayer();
         if (get_riskFlag() == 1) { 
             caption = "Dein Hof ging zu hohe Risiken ein";
