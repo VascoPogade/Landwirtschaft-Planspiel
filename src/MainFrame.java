@@ -78,8 +78,8 @@ public class MainFrame extends JFrame {
                 image = new ImageIcon("src/resources/End_Mitarbeiterzufriedenheit_2.png");
             } else {
                 // Gewinner Screen
-                caption = "Spiel vorbei";
-                explanation = "Sie haben das Ende des Spiels erreicht.";
+                caption = "Glückwunsch du hast gewonnen!";
+                explanation = "Sie haben das Ende des Spiels mit erfolg erreicht.";
                 image = new ImageIcon("src/resources/Successful.png");
             } 
     }
